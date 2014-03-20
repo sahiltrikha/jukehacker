@@ -5,11 +5,11 @@ Jukehacker::Application.routes.draw do
   #navbar: for hosts logged in, allow them to see their login information
   get "/host/:id", to: "host#show"
 
-  get "partycreate", to: "party#new"
+  get "partycreate", to: "parties#new"
 
-  get "party-dashboard", to: "party#show"
+  get "party-dashboard/:id", to: "parties#show"
 
-  get "host/:id/party", to: "party#index"
+  get "host/:id/party", to: "parties#index"
   
   resources :users 
   resources :hosts
