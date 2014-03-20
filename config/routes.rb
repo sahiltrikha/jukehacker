@@ -15,8 +15,11 @@ Jukehacker::Application.routes.draw do
     resources :hosts
     resources :guests
   end 
-  
+
   resources :songs do 
+  end 
+
+  resources :parties do 
     resources :played_songs
     resources :queued_songs
   end 
