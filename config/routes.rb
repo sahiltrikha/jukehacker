@@ -11,7 +11,7 @@ Jukehacker::Application.routes.draw do
 
   get "host/:id/party", to: "parties#index"
 
-  get '/sms', to: 'sms#index'
+  get '/sms', to: 'sms#req'
 
   get '/getqueue', to: 'queued_songs#get_queue'
 
