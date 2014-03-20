@@ -5,3 +5,73 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.destroy_all
+Host.destroy_all
+Party.destroy_all
+Song.destroy_all
+QueuedSong.destroy_all
+
+user1 = User.create(
+  phone_number: "6103315573", 
+  first_name: "Michael", 
+  last_name: "Wagner"
+  )
+
+host = Host.create(
+  user_id: user1.id, 
+  email: "michael.k.wagner@gmail.com", 
+  zip: 10128
+  )
+
+party1 = Party.create(
+  host_id: host.id, 
+  party_key: "#WagParty", 
+  # party_expiry: "03/20/2014"
+  )
+
+song1 = Song.create(
+  grooveshark_id: 408271,
+  title: "Oxford Comma",
+  artist: "Vampire Weekend",
+  length: 196
+  )
+
+song2 = Song.create(
+  grooveshark_id: 936496,
+  title: "Me and Julio down by the School",
+  artist: "Paul Simon",
+  length: 163
+  )
+
+song3 = Song.create(
+  grooveshark_id: 25133412,
+  title: "Enter Sandman",
+  artist: "Metallica",
+  length: 332
+  )
+
+queue_song1 = QueuedSong.create(
+  party_id: party1.id, 
+  song_id: song1.id, 
+  user_id: user1.id, 
+  upvotes: 0, 
+  downvotes: 0 
+  )
+
+queue_song2 = QueuedSong.create(
+  party_id: party1.id, 
+  song_id: song2.id, 
+  user_id: user1.id, 
+  upvotes: 0, 
+  downvotes: 0 
+  )
+
+queue_song3 = QueuedSong.create(
+  party_id: party1.id, 
+  song_id: song3.id, 
+  user_id: user1.id, 
+  upvotes: 0, 
+  downvotes: 0 
+  )
+
