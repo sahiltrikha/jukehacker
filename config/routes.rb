@@ -13,6 +13,9 @@ Jukehacker::Application.routes.draw do
 
   get '/sms', to: 'sms#index'
   
+  get '/getqueue', to: 'queued_songs#getqueue'
+
+
   resources :users 
   resources :hosts
   resources :guests
