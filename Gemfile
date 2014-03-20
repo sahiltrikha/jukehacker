@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 gem 'twilio-ruby'
 
 gem 'httparty'
@@ -62,3 +63,6 @@ gem 'grooveshark'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# required gem for heroku
+gem 'rails_12factor', group: :production
