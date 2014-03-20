@@ -14,7 +14,8 @@ class SmsController < ApplicationController
     @client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
 
     @client.account.messages.list.each do |message|
-    puts message.body
+      puts message.body
+    end
   end
 
   def send_text_message
