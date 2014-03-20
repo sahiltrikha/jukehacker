@@ -1,5 +1,6 @@
 require 'spec_helper'
 
 describe Song do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it {should have_many(:played_songs)}
+  it {should have_many(:queued_songs)}
 end
