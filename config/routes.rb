@@ -11,18 +11,15 @@ Jukehacker::Application.routes.draw do
 
   get "host/:id/party", to: "party#index"
   
-  resources :users do 
-    resources :hosts
-    resources :guests
-  end 
+  resources :users 
+  resources :hosts
+  resources :guests
 
-  resources :songs do 
-  end 
+  resources :songs
+  resources :parties
+  resources :played_songs
+  resources :queued_songs
 
-  resources :parties do 
-    resources :played_songs
-    resources :queued_songs
-  end 
 
 
 end
