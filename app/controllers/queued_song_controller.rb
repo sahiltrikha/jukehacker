@@ -8,4 +8,9 @@ class QueueController < ApplicationController
   ##Step 2B:  Add Song to the Song Queue
   end 
 
+  def getqueue
+    @party = Party.find(params[:id])
+    render json: @party.upcoming_songs
+  end
+
 end 

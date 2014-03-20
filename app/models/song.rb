@@ -15,7 +15,7 @@ class Song < ActiveRecord::Base
     
   def addSong(songstring)
 
-    if Song.where(title: song.title) = []
+    if Song.where(title: song.title) == []
 
     end  
 
