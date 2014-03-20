@@ -10,6 +10,10 @@ class PartiesController < ApplicationController
     redirect_to "/party-dashboard/#{@party.id}"
   end
 
+  def show
+    @party = Party.find(params[:id])
+  end
+
   private
 
   def party_params
