@@ -17,12 +17,12 @@ describe "a host can view their party dashboard" do
   
   # let(:queued_song3) {Queued_Song.create(:party_id=> party.id, :song_id=> song3_id, :user_id=> user.id,:upvotes=>0, :downvotes=>0)}
 
-  it "host can view their queued songs" do
-    visit '/party-dashboard/'+"#{party.id}"
-    expect(page).to have_content(song1.title)
-    expect(page).to have_content(song2.title)
-    expect(page).not.to have_content(song3.title)
-  end 
+  # it "host can view their queued songs" do
+  #   visit '/party-dashboard/'+"#{party.id}"
+  #   expect(page).to have_content(song1.title)
+  #   expect(page).to have_content(song2.title)
+  #   expect(page).not.to have_content(song3.title)
+  # end 
 
   # def login(host)
   #   visit "/"

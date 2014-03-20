@@ -1,4 +1,4 @@
-module GroovesharkSearch
+module GroovesharkSearchHelper
 
   def getGrooveshark(songstring, party_id, user_id)
     party_id = party_id

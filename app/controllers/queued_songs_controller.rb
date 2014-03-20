@@ -1,5 +1,5 @@
 class QueuedSongsController < ApplicationController
-  include GroovesharkSearch
+  include GroovesharkSearchHelper
   
   def create
     
