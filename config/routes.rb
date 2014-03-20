@@ -11,8 +11,8 @@ Jukehacker::Application.routes.draw do
 
   get "host/:id/party", to: "party#index"
 
-  get '/sms', to: 'sms#reply'
-  post '/sms', to: 'sms#request'
+  get '/sms', to: 'sms#req'
+  # post '/sms', to: 'sms#request'
   
   resources :users 
   resources :hosts
