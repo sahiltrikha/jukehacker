@@ -1,4 +1,4 @@
-class QueueController < ApplicationController
+class QueuedSongsController < ApplicationController
 
   def create
 
@@ -8,7 +8,7 @@ class QueueController < ApplicationController
   ##Step 2B:  Add Song to the Song Queue
   end 
 
-  def getqueue
+  def get_queue
     @party = Party.find(params[:id])
     render json: @party.upcoming_songs
   end
