@@ -5,7 +5,6 @@ class QueuedSongsController < ApplicationController
     @user_party = Party.find_by(id: params[:party_id])
     @songstring = params[:songstring]
     @party_id = params[:party_id]
-    binding.pry
     getGrooveshark("#{@songstring}", "#{@party_id}", "#{@user_party.id}")
 
   end 
