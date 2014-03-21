@@ -1,0 +1,25 @@
+<h1>Welcome</h1>
+
+<div>
+  <%=form_tag "/sessions" do %>
+    <%= label_tag :email %>
+    <%= email_field_tag :email, session[:email] %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+
+    <%=submit_tag "Log in!" %>
+  <%end%>
+</div>
+
+<% unless session[:message].nil? %>
+  <div id="errors">
+      <em><%= session[:message] %></em>
+  </div>
+<% end %>
+
+
+
+<%= render partial: "hosts/sign_up", locals: {host: @host} %>
+
+
+

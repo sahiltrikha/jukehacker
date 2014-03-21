@@ -9,6 +9,7 @@ Jukehacker::Application.routes.draw do
 
   get "party-dashboard/:id", to: "parties#show"
 
+
   get "host/:id/party", to: "parties#index"
 
   get '/sms', to: 'sms#index'
@@ -24,7 +25,6 @@ Jukehacker::Application.routes.draw do
   resources :parties
   resources :played_songs
   resources :queued_songs
-
-
+  post "/sessions", to: "sessions#create"
 
 end
