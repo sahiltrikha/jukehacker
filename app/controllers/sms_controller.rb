@@ -8,6 +8,7 @@ class SmsController < ApplicationController
     @client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
     #@all_messages = @client.account.messages.list
     #@current_message_object = @client.account.messages.list[0]
+    @current_message_sender = @client.account.messages.list[0].from
     @current_message_body = @client.account.messages.list[0].body
     reply
     render :index
@@ -15,7 +16,7 @@ class SmsController < ApplicationController
 
   def reply
     # number_to_send_to = params[:number_to_send_to]
-    number_to_send_to = '5129052044'
+    number_to_send_to = '#{@current_message_sender}'
  
     @twilio_client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
  
