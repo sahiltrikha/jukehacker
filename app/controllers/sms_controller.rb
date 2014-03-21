@@ -18,12 +18,11 @@ class SmsController < ApplicationController
     number_to_send_to = '5129052044'
  
     @twilio_client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
-    binding.pry
  
     @twilio_client.account.sms.messages.create(
       :from => "+1#{TWILIO_PHONE_NUMBER}",
       :to => number_to_send_to,
-      :body => "#{@current_message_body}"
+      :body => "Thanks for Requesting: #{@current_message_body}. Welcome to the Party."
     )
   end
 end
