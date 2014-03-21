@@ -14,8 +14,8 @@ class SmsController < ApplicationController
 
   def reply
     # number_to_send_to = params[:number_to_send_to]
-    number_to_send_to =  @client.account.messages.list[1].from
-    @last_guest_message_body = @client.account.messages.list[1].body
+    number_to_send_to =  @client.account.messages.list[0].from
+    @last_guest_message_body = @client.account.messages.list[0].body
     @twilio_client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
     @twilio_client.account.sms.messages.create(
       :from => "+1#{TWILIO_PHONE_NUMBER}",
