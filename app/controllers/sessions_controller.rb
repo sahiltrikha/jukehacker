@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
     user = Host.find_by(email: params[:email])
     binding.pry
     if user && ( user.authenticate(params[:password])  )
-      session[:user_id] = user.id
-      session[:superuser] = user.superuser
-      redirect_to(user_path(user)) 
+      # session[:user_id] = user.id
+      # session[:superuser] = user.superuser
+      redirect_to(host_path(user)) 
     else
       session[:message] = "This email and password combination does not exist"
       session[:email] = params[:email]

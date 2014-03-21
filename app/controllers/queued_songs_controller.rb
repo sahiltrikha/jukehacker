@@ -2,11 +2,12 @@ class QueuedSongsController < ApplicationController
   include GroovesharkSearchHelper
 
   def create
-    @user_party = Party.find_by(id: params[:party_id])
+    @user_party = Party.find_by(id: request.referer.split("/").last.to_i)
     @songstring = params[:songstring]
-    @party_id = params[:party_id]
-    getGrooveshark("#{@songstring}", "#{@party_id}", "#{@user_party.id}")
+    @party_id = request.referer.split("/").last.to_i
+    getGrooveshark("#{@songstring}", @party_id, @user_party.id)
     render json: Song.last
+
   end 
 
   def get_queue
