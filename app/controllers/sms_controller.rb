@@ -6,9 +6,9 @@ class SmsController < ApplicationController
 
   def req
     @client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
-    #@all_messages = @client.account.messages.list
+    @all_messages = @client.account.messages.list
     #@current_message_object = @client.account.messages.list[0]
-    @current_message_sender = @client.account.messages.list[0].from
+    @current_message_sender = @client.account.messages.list[0].to
     @current_message_body = @client.account.messages.list[0].body
     reply
     render :index
