@@ -20,7 +20,6 @@ module GroovesharkSearchHelper
   
   def addSong(song)
     if song.data["estimate_duration"].to_i == 0
-      binding.pry
       Song.create({title: song.data["song_name"], artist: song.data["artist_name"], duration: itunesDuration(song.data["song_name"], song.data["artist_name"]) + 3000, grooveshark_artist: song.data["artist_id"].to_i, grooveshark_id: song.data["song_id"].to_i})
     else
       Song.create({title: song.data["song_name"], artist: song.data["artist_name"], duration: song.data["estimate_duration"].to_i * 1000 + 1500, grooveshark_artist: song.data["artist_id"].to_i, grooveshark_id: song.data["song_id"].to_i})
@@ -34,7 +33,7 @@ module GroovesharkSearchHelper
     song_name = song.gsub(" ","+")
 
 
-    from_itunes = HTTParty.get("https://itunes.apple.com/search?term=#{song_name}&artistName=#{artist_name}&limit=10")
+    from_itunes = HTTParty.get("http://itunes.apple.com/search?term=#{song_name}&artistName=#{artist_name}&limit=10")
 
     from_itunes_as_hash = JSON(from_itunes)
 
