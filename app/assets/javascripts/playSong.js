@@ -13,5 +13,5 @@ var playSong = function(){
      });
     return song.length
   });
-  setTimeout(playSong, length);
+  setTimeout(playSong, 10000);
 };
