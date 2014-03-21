@@ -27,7 +27,7 @@ class SmsController < ApplicationController
           Guest.create(user_id: @current_user.id, party_id: current_party.id)#find party by message and add user
           reply("Congrats! You've Joined #{current_party.party_key}")#reply "CONGRATS HOMIE. reply for requests"
         else #the user's message is rando
-          reply("I don’t see how you can hate from outside of the club, You can’t even get in!")
+          reply("You mad bro?")
         end
       end
 
