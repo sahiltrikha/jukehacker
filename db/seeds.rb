@@ -13,7 +13,7 @@ Song.destroy_all
 QueuedSong.destroy_all
 
 user1 = User.create(
-  phone_number: "6103315573", 
+  phone_number: "+16103315573", 
   first_name: "Michael", 
   last_name: "Wagner"
   )
@@ -21,12 +21,12 @@ user1 = User.create(
 host = Host.create(
   user_id: user1.id, 
   email: "michael.k.wagner@gmail.com", 
-  zip: 10128
+  zip: 10128,
   )
 
 party1 = Party.create(
   host_id: host.id, 
-  party_key: "#WagParty", 
+  party_key: "#wagparty", 
   # party_expiry: "03/20/2014"
   )
 
