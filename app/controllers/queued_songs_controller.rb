@@ -24,6 +24,7 @@ class QueuedSongsController < ApplicationController
   def destroy
     @song = QueuedSong.find_by(song_id: params[:song_id], party_id: params[:party_id])
     @song.destroy
+    render json: Song.all
   end
 
 

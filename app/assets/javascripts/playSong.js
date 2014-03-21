@@ -6,8 +6,11 @@ var playSong = function(){
     $.ajax({
       url: '/playingsong',
       type: 'DELETE',
-      data: {song_id: song.id, party_id: window.location.href.split("/")[4]}
+      data: {song_id: song.id, party_id: window.location.href.split("/")[4]},
+      success: function(){
+        console.log("delete playing song success");
+      } //success
     });
   });
-  setTimeout(playSong(), 10000);
+  setTimeout(playSong, 10000);
 };
