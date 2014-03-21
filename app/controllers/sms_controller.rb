@@ -1,7 +1,5 @@
 class SmsController < ApplicationController
   
-  # base URL of this application
-  BASE_URL = "http://www.yourserver.com:3000/sms"
   TWILIO_PHONE_NUMBER = '9083005599'
 
   def req
@@ -11,7 +9,7 @@ class SmsController < ApplicationController
     @current_message_sender = @client.account.messages.list[0].from
     @current_message_body = @client.account.messages.list[0].body
     reply
-    render :index
+    render ('index')
   end
 
   def reply
