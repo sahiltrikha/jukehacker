@@ -1,1 +1,5 @@
-<%= @current_message_body %>
+<% @all_messages.each do |message| %>
+  <% unless message.from == "+19083005599" %>
+  <%= message.from %>   <%= message.body %><br>
+  <% end %>
+<% end %>
