@@ -9,7 +9,7 @@ module GroovesharkSearchHelper
 
     unless Song.where(title: song.data["song_name"]).present?
       addSong(song)
-    end  
+    end
 
     jukebox_song = Song.find_by(grooveshark_id:  song.data["song_id"])
     QueuedSong.create(
