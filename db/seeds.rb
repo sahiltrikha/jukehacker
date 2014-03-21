@@ -34,21 +34,21 @@ song1 = Song.create(
   grooveshark_id: 408271,
   title: "Oxford Comma",
   artist: "Vampire Weekend",
-  length: 196
+  duration: 196000
   )
 
 song2 = Song.create(
   grooveshark_id: 936496,
   title: "Me and Julio down by the School",
   artist: "Paul Simon",
-  length: 163
+  duration: 163000
   )
 
 song3 = Song.create(
   grooveshark_id: 25133412,
   title: "Enter Sandman",
   artist: "Metallica",
-  length: 332
+  duration: 332000
   )
 
 queue_song1 = QueuedSong.create(
