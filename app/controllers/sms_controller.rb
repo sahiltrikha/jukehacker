@@ -16,7 +16,7 @@ class SmsController < ApplicationController
 
   def reply
     # number_to_send_to = params[:number_to_send_to]
-    number_to_send_to = '#{@current_message_sender}'
+    number_to_send_to = @current_message_sender
  
     @twilio_client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
  
