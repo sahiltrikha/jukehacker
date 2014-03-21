@@ -14,12 +14,14 @@ class SmsController < ApplicationController
 
   def reply
     # number_to_send_to = params[:number_to_send_to]
-    number_to_send_to = @current_message_sender
+    binding.pry
+    number_to_send_to =  @client.account.messages.list[1].from
+    @last_guest_message_body = @client.account.messages.list[1].body
     @twilio_client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
     @twilio_client.account.sms.messages.create(
       :from => "+1#{TWILIO_PHONE_NUMBER}",
       :to => number_to_send_to,
-      :body => "Thanks for Requesting: #{@current_message_body}. Welcome to the Party."
+      :body => "Thanks for Requesting: #{@last_guest_message_body}. Welcome to the Party."
     )
   end
 end
