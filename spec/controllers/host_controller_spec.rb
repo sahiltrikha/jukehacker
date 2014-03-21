@@ -10,10 +10,7 @@ describe HostsController do
         phone_number: "6104414423" 
         })
     end
-
-
-
-
+    
     context "WHEN Host Cell Phone exists on User Table" do 
       it "Creates a New Host with the User as the foreign Key" do 
         @params={"cell_phone"=>"6104414423","password"=>"winner","password_confirmation"=>"winner"}
