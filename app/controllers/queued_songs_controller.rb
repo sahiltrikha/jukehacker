@@ -7,6 +7,7 @@ class QueuedSongsController < ApplicationController
     @party_id = request.referer.split("/").last.to_i
     getGrooveshark("#{@songstring}", @party_id, @user_party.id)
     render json: Song.last
+
   end 
 
   def get_queue
