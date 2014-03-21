@@ -15,6 +15,17 @@ class QueuedSongsController < ApplicationController
     render json: @party.upcoming_songs
   end
 
+  def get_next_song
+    # Finds the oldest song remaining to play for a given party
+    @song = QueuedSong.find_by(party_id: request.referer.split("/").last.to_i).song
+    render json: @song
+  end
+
+  def destroy
+    @song = QueuedSong.find_by(song_id: params[:song_id], party_id: params[:party_id])
+    @song.destroy
+  end
+
 
 
   private

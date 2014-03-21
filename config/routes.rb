@@ -15,7 +15,9 @@ Jukehacker::Application.routes.draw do
   get '/sms', to: 'sms#req'
 
   get '/getqueue', to: 'queued_songs#get_queue'
-
+  get '/getnextsong', to: 'queued_songs#get_next_song'
+  post '/startsong', to: 'played_songs#create'
+  delete '/playingsong', to: 'queued_songs#destroy'
 
   resources :users 
   resources :hosts
