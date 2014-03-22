@@ -77,3 +77,8 @@ queue_song3 = QueuedSong.create(
   downvotes: 0 
   )
 
+rule1 = Rule.create(
+  party_id: party1.id, 
+  condition: artist, 
+  banned_value: "Justin Beiber"
+  )
