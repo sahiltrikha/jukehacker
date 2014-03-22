@@ -22,13 +22,12 @@ class SmsController < ApplicationController
       if Guest.find_by(user_id: @current_user.id).nil? == false  #User is in a party (they have been validadted with a party key)
         current_guest_info = Guest.find_by(user_id: @current_user.id)
         current_party_id = current_guest_info.party_id
-        current_party = Party.find_by(party_id: current_party_id)
-        if Time.now < current_party.party_expiry
-          # reply("Your song, #{@current_message_body}, has been added to the queue")
-          # getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
-          reply("we wish we could add your song!")
-        else
+        current_party = Party.find_by(id: current_party_id)
+        if Time.now > current_party.party_expiry
           reply("go home brah, no more songs for you.")
+        else
+          reply("Your song, #{@current_message_body}, has been added to the queue")
+          getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
         end
       elsif Guest.find_by(user_id: @current_user.id).nil? == true #User is not in a party (they are not a guest but they are a user in the database)
         if Party.find_by(party_key: @current_message_body).nil? == false #the user's message is #wagparty
