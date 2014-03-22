@@ -4,8 +4,7 @@ module PartyRulesHelper
 ##Step 2:  Evaluate each rule to determine if song is okay
 
   def getPartyRules(party_id)
-    @rules = PartyRules.where(party_id: party_id)
-
+    @rules = Rule.where(party_id: party_id)
       rules_hash = {}
       conditions = @rules.map {|rule| rule.condition}
       conditions.uniq!
