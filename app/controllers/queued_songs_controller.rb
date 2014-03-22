@@ -17,7 +17,12 @@ class QueuedSongsController < ApplicationController
 
   def get_next_song
     # Finds the oldest song remaining to play for a given party
-    @song = QueuedSong.find_by(party_id: request.referer.split("/").last.to_i).song
+    unless QueuedSong.find_by(party_id: request.referer.split("/").last.to_i).nil?
+      @song = QueuedSong.find_by(party_id: request.referer.split("/").last.to_i).song
+    else
+      @song = ["DONE"]
+    end
+
     render json: @song
   end
 
