@@ -18,6 +18,12 @@ user1 = User.create(
   last_name: "Wagner"
   )
 
+user2 = User.create(
+  phone_number: "+16467524876", 
+  first_name: "Etan", 
+  last_name: "Berkowitz"
+  )
+
 host = Host.create(
   user_id: user1.id, 
   email: "michael.k.wagner@gmail.com", 
@@ -26,10 +32,24 @@ host = Host.create(
   zip: 10128
   )
 
+host2 = Host.create(
+  user_id: user2.id, 
+  email: "etan.berkowitz@gmail.com", 
+  password: "donkeypiss", 
+  password_confirmation: "donkeypiss",
+  zip: 10024,
+  )
+
 party1 = Party.create(
   host_id: host.id, 
   party_key: "#wagparty", 
-  # party_expiry: "03/20/2014"
+  party_expiry: Time.now + 5*60 
+  )
+
+party2 = Party.create(
+  host_id: host2.id, 
+  party_key: "#berkoparty", 
+  party_expiry: Time.now + 5*60 
   )
 
 song1 = Song.create(
