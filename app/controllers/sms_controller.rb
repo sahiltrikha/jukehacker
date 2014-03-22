@@ -26,8 +26,8 @@ class SmsController < ApplicationController
           Guest.create(user_id: @current_user.id, party_id: current_party.id)#find party by message and add user
           reply("Congrats! You've joined #{current_party.party_key}")#reply "CONGRATS HOMIE. reply for requests"
         end
-      elsif Guest.find_by(user_id: @current_user.id)
-        current_guest_info = Guest.find_by(user_id: @current_user.id)
+      elsif Guest.where(user_id: @current_user.id).last
+        current_guest_info = Guest.where(user_id: @current_user.id).last
         current_party_id = current_guest_info.party_id
         current_party = Party.find_by(id: current_party_id)
         if Time.now < current_party.party_expiry
