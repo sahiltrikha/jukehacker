@@ -10,13 +10,13 @@ describe QueuedSongsController do
         grooveshark_id: 936496,
         title: "Me and Julio down by the School",
         artist: "Paul Simon",
-        length: 163
+        duration: 163000
         )
       @song2 = song3 = Song.create(
         grooveshark_id: 25133412,
         title: "Enter Sandman",
         artist: "Metallica",
-        length: 332
+        duration: 332000
         )
 
       @party.upcoming_songs << @song
