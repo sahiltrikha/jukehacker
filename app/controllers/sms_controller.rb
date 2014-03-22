@@ -24,8 +24,9 @@ class SmsController < ApplicationController
         current_party_id = current_guest_info.party_id
         current_party = Party.find_by(party_id: current_party_id)
         if Time.now < current_party.party_expiry
-          reply("Your song, #{@current_message_body}, has been added to the queue")
-          getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
+          # reply("Your song, #{@current_message_body}, has been added to the queue")
+          # getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
+          reply("we wish we could add your song!")
         else
           reply("go home brah, no more songs for you.")
         end
