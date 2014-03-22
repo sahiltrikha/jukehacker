@@ -23,7 +23,7 @@ class SmsController < ApplicationController
           current_guest_info = Guest.find_by(user_id: @current_user.id)
           current_party_id = current_guest_info.party_id
           current_party = Party.find_by(party_id: current_party_id)
-          if Time.now < current_party.party_expiry
+          if Time.now > current_party.party_expiry
             reply("go home brah.")
           else
             reply("Your song, #{@current_message_body}, has been added to the queue")
@@ -32,7 +32,7 @@ class SmsController < ApplicationController
         elsif Guest.find_by(user_id: @current_user.id).nil? == true #User is not in a party (they are not a guest but they are a user in the database)
           if Party.find_by(party_key: @current_message_body).nil? == false #the user's message is #wagparty
             current_party = Party.find_by(party_key: @current_message_body)
-            if Time.now < current_party.party_expiry
+            if Time.now > current_party.party_expiry
               reply("go home brah.")
             else
               Guest.create(user_id: @current_user.id, party_id: current_party.id)#find party by message and add user
