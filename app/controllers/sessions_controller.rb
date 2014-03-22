@@ -2,7 +2,6 @@ class SessionsController < ApplicationController
   
   def create
     user = Host.find_by(email: params[:email])
-    binding.pry
     if user && ( user.authenticate(params[:password])  )
       # session[:user_id] = user.id
       # session[:superuser] = user.superuser
