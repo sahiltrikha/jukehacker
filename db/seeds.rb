@@ -6,18 +6,24 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# Clears the database
 User.destroy_all
 Host.destroy_all
 Party.destroy_all
 Song.destroy_all
 QueuedSong.destroy_all
+PlayedSong.destroy_all
+Rules.destroy_all
+Guest.destroy_all
 
+# Creates User
 user1 = User.create(
   phone_number: "+16103315573", 
   first_name: "Michael", 
   last_name: "Wagner"
   )
 
+# Creates Host
 host = Host.create(
   user_id: user1.id, 
   email: "michael.k.wagner@gmail.com", 
@@ -26,12 +32,14 @@ host = Host.create(
   zip: 10128
   )
 
+# Creates Party
 party1 = Party.create(
   host_id: host.id, 
   party_key: "#wagparty", 
   # party_expiry: "03/20/2014"
   )
 
+# Creates Songs
 song1 = Song.create(
   grooveshark_id: 408271,
   title: "Oxford Comma",
@@ -53,6 +61,7 @@ song3 = Song.create(
   duration: 332000
   )
 
+# Adds songs to the queue
 queue_song1 = QueuedSong.create(
   party_id: party1.id, 
   song_id: song1.id, 
