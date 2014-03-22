@@ -21,6 +21,8 @@ user1 = User.create(
 host = Host.create(
   user_id: user1.id, 
   email: "michael.k.wagner@gmail.com", 
+  password: "winner", 
+  password_confirmation: "winner",
   zip: 10128,
   )
 
