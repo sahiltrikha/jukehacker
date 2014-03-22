@@ -29,7 +29,7 @@ host = Host.create(
 party1 = Party.create(
   host_id: host.id, 
   party_key: "#wagparty", 
-  # party_expiry: "03/20/2014"
+  party_expiry: Time.now + 5*60 
   )
 
 song1 = Song.create(
