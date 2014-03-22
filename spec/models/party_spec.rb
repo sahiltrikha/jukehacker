@@ -6,4 +6,5 @@ describe Party do
   it {should have_many(:queued_songs)}
   it {should have_many(:played_songs)}
   it {should validate_presence_of(:party_key)}
+  it {should belong_to(:host) }
 end
