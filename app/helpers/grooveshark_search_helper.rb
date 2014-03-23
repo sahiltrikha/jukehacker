@@ -1,21 +1,32 @@
 module GroovesharkSearchHelper
+  include PartyRulesHelper
 
   def getGrooveshark(songstring, party_id, user_id)
-    party_id = party_id
+    #Step 1:  Get GrooveShart Information
     client = Grooveshark::Client.new
-    session = client.session
     song = client.search_songs(songstring).first
     song_title = song.data["song_name"]
-
-    unless Song.find_by(title: song.data["song_name"]).present?
+    
+    #Step 2:  Evalute whether Song is Stored on Song Table
+    @juke_song =  Song.find_by(title: song_title)
+    if @juke_song.nil?
       addSong(song)
     end
-
-    jukebox_song = Song.find_by(grooveshark_id: song.data["song_id"])
-    QueuedSong.create(
-      {party_id: party_id, song_id: jukebox_song.id, user_id: user_id}
-      )
+    @jukebox_song = Song.find_by(grooveshark_id: song.data["song_id"])
     
+
+    #Step 3:  Evaluate whether Song should be played
+    evaluatePartyRules(@jukebox_song, party_id)
+    binding.pry
+
+    #Step 4:  If Song is allowed, add song to Song Queue
+    unless @song_rejected
+     QueuedSong.create(
+      {party_id: party_id, song_id: @jukebox_song.id, user_id: user_id}
+      )
+    end 
+    binding.pry
+
   end   
   
   def addSong(song)
@@ -40,5 +51,6 @@ module GroovesharkSearchHelper
     return from_itunes_as_hash["results"][0]["trackTimeMillis"]
 
   end
+
 
 end
