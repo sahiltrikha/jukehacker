@@ -21,6 +21,10 @@ module PartyRulesHelper
 
   end 
 
+  def createRule
+  
+  end
+
 end 
 
 
