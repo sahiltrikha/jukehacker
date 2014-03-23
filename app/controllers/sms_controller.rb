@@ -48,31 +48,29 @@ class SmsController < ApplicationController
     end
   end
 
-  render ('index')
-end
 
-def reply(message)
-  number_to_send_to = @current_message_sender
-  @twilio_client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
-  @twilio_client.account.sms.messages.create(
-    :from => "+1#{TWILIO_PHONE_NUMBER}",
-    :to => number_to_send_to,
-    :body => "#{message}"
-    )
-end
-
-def return_queue
-  message = [];
-  @queued_songs = QueuedSong.where(@current_party.id)
-  @songs = @queued_songs.map do |queued_song|
-    Song.find(queued_song.song_id)
-  end
-  @songs.each do |song|
-    message << song.title
+  def reply(message)
+    number_to_send_to = @current_message_sender
+    @twilio_client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
+    @twilio_client.account.sms.messages.create(
+      :from => "+1#{TWILIO_PHONE_NUMBER}",
+      :to => number_to_send_to,
+      :body => "#{message}"
+      )
   end
 
-  reply(message.join(" "))
-end
+  def return_queue
+    message = [];
+    @queued_songs = QueuedSong.where(@current_party.id)
+    @songs = @queued_songs.map do |queued_song|
+      Song.find(queued_song.song_id)
+    end
+    @songs.each do |song|
+      message << song.title
+    end
+
+    reply(message.join(" "))
+  end
 end
 
 
