@@ -17,7 +17,6 @@ module GroovesharkSearchHelper
 
     #Step 3:  Evaluate whether Song should be played
     evaluatePartyRules(@jukebox_song, party_id)
-    binding.pry
 
     #Step 4:  If Song is allowed, add song to Song Queue
     unless @song_rejected
@@ -25,8 +24,6 @@ module GroovesharkSearchHelper
       {party_id: party_id, song_id: @jukebox_song.id, user_id: user_id}
       )
     end 
-    binding.pry
-
   end   
   
   def addSong(song)
