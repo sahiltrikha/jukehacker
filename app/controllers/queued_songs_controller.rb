@@ -12,8 +12,9 @@ class QueuedSongsController < ApplicationController
 
   def get_queue
     # Returns the full queue for a party
-    @party = Party.find(request.referer.split("/").last.to_i)
-    render json: @party.upcoming_songs
+    @party = Party.find(params[:id])
+    @queue = @party.queued_songs.order(total_votes: :desc)
+    render json: @queue.map{|entry| entry.song}
   end
 
   def get_next_song
