@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-
-  self.has_secure_password()
-  
+  has_one :host
+  has_many :guests
 end

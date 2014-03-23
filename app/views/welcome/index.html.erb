@@ -1,5 +1,6 @@
 <h1>Welcome</h1>
 
+<h3>Already a Host?  Login to start a Party</h3>
 <div>
   <%=form_tag "/sessions" do %>
     <%= label_tag :email %>
@@ -18,6 +19,7 @@
 <% end %>
 
 
+<h3>Ready to Host a Party?  Enter your information to create an account</h3>
 
 <%= render partial: "hosts/sign_up", locals: {host: @host} %>
 

@@ -5,6 +5,8 @@ class PartiesController < ApplicationController
 
   def create
     @party = Party.create(party_params)
+    
+    # hard sets the expiration for the party at six hours in the future
     @party.party_expiry = @party.created_at + 6.hours
     @party.save
     redirect_to "/party-dashboard/#{@party.id}"
