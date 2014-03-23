@@ -27,6 +27,7 @@ class SmsController < ApplicationController
           reply("Congrats! You've joined #{current_party.party_key}")#reply "CONGRATS HOMIE. reply for requests"
         end
 
+
       ##guest has joined a party at this point
     elsif Guest.where(user_id: @current_user.id).last
       current_guest_info = Guest.where(user_id: @current_user.id).last
