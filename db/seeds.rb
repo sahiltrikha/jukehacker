@@ -87,27 +87,27 @@ queue_song1 = QueuedSong.create(
   party_id: party1.id, 
   song_id: song1.id, 
   user_id: user1.id, 
-  upvotes: 3, 
-  downvotes: 2, 
-  total_votes: 1
+  upvotes: 0, 
+  downvotes: 0, 
+  total_votes: 0
   )
 
 queue_song2 = QueuedSong.create(
   party_id: party1.id, 
   song_id: song2.id, 
   user_id: user1.id, 
-  upvotes: 33, 
-  downvotes: 10,
-  total_votes: 23
+  upvotes: 0, 
+  downvotes: 0,
+  total_votes: 0
   )
 
 queue_song3 = QueuedSong.create(
   party_id: party1.id, 
   song_id: song3.id, 
   user_id: user1.id, 
-  upvotes: 10, 
-  downvotes: 5,
-  total_votes: 5 
+  upvotes: 0, 
+  downvotes: 0,
+  total_votes: 0
   )
 
 rule1 = Rule.create(
