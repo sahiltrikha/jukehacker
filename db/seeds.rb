@@ -87,9 +87,9 @@ queue_song1 = QueuedSong.create(
   party_id: party1.id, 
   song_id: song1.id, 
   user_id: user1.id, 
-  upvotes: 3, 
-  downvotes: 2, 
-  total_votes: 1
+  upvotes: 5, 
+  downvotes: 1, 
+  total_votes: 4
   )
 
 queue_song2 = QueuedSong.create(

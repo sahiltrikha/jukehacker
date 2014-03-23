@@ -62,6 +62,7 @@ class SmsController < ApplicationController
     upvoted_song = queued_songs[message_num-1]
     upvoted_song.upvotes += 1
     upvoted_song.total_votes += 1
+    upvoted_song.save
     reply("Thanks for upvoting!")
   end
 
@@ -72,6 +73,7 @@ class SmsController < ApplicationController
     upvoted_song = queued_songs[message_num-1]
     upvoted_song.upvotes -= 1
     upvoted_song.total_votes -= 1
+    upvoted_song.save
     reply("Thanks for downvoting!")
   end
 
