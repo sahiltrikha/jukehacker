@@ -7,6 +7,7 @@ class SmsController < ApplicationController
     @client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
     @all_messages = @client.account.messages.list
     @current_message_body = @client.account.messages.list[0].body
+    @current_message_body.downcase!
     @current_message_sender = @client.account.messages.list[0].from
 
     unless @current_message_sender == "+19083005599"
@@ -63,7 +64,7 @@ class SmsController < ApplicationController
 
   def return_queue
     message = [];
-    @queued_songs = QueuedSong.where(@current_party.id)
+    @queued_songs = QueuedSong.where(party_id: @current_party.id)
     @songs = @queued_songs.map do |queued_song|
       Song.find(queued_song.song_id)
     end
