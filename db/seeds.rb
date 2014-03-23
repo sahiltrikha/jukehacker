@@ -13,7 +13,7 @@ Party.destroy_all
 Song.destroy_all
 QueuedSong.destroy_all
 PlayedSong.destroy_all
-Rules.destroy_all
+Rule.destroy_all
 Guest.destroy_all
 
 # Creates User
