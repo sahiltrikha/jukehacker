@@ -37,6 +37,11 @@ class SmsController < ApplicationController
         if Time.now < @current_party.party_expiry
           if @current_message_body == "#queue"
             return_queue
+          elsif @current_message_body.include?("#upvote")
+            upvote
+          elsif @current_message_body.include?("#downvote")
+            
+            downvote
           else
             reply("Your song, #{@current_message_body}, has been added to the queue")
             getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
@@ -48,6 +53,26 @@ class SmsController < ApplicationController
         reply("Don't send us garbage!")
       end
     end
+  end
+
+  def upvote
+    message = @current_message_body.split(" ")
+    message_num = message[1].to_i
+    queued_songs = @current_party.queued_songs.order(total_votes: :desc)
+    upvoted_song = queued_songs[message_num-1]
+    upvoted_song.upvotes += 1
+    upvoted_song.total_votes += 1
+    reply("Thanks for upvoting!")
+  end
+
+  def downvote
+    message = @current_message_body.split(" ")
+    message_num = message[1].to_i
+    queued_songs = @current_party.queued_songs.order(total_votes: :desc)
+    upvoted_song = queued_songs[message_num-1]
+    upvoted_song.upvotes -= 1
+    upvoted_song.total_votes -= 1
+    reply("Thanks for downvoting!")
   end
 
 
@@ -70,7 +95,7 @@ class SmsController < ApplicationController
       Song.find(queued_song.song_id)
     end
     @songs.each_with_index do |song, index|
-      message << (index+1) + " " + song.title
+      message << (index+1).to_s + " " + song.title
     end
 
 
