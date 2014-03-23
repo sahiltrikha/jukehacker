@@ -11,7 +11,7 @@ module PartyRulesHelper
 
   def evaluatePartyRules(song, party_id)
     getPartyRules(party_id)
- 
+
     @song_rejected = @rules_hash.map do 
       |condition,values|
       values.include?(@jukebox_song.instance_eval(condition.to_s)) 
@@ -21,8 +21,13 @@ module PartyRulesHelper
 
   end 
 
-  def createRule
-  
+  def createRule(column_to_check, banned_item)
+    if Rule.where(condition: column_to_check, banned_value: banned_item).first.nil?
+      rule = Rule.create{condition: column_to_check, banned_value: banned_item}
+    else 
+      rule = Rule.where(condition: column_to_check, banned_value: banned_item).first
+    end
+    return rule
   end
 
 end 
