@@ -29,24 +29,26 @@ class SmsController < ApplicationController
 
 
       ##guest has joined a party at this point
-    elsif Guest.where(user_id: @current_user.id).last
-      current_guest_info = Guest.where(user_id: @current_user.id).last
-      current_party_id = current_guest_info.party_id
-      @current_party = Party.find_by(id: current_party_id)
-      if Time.now < @current_party.party_expiry
-        if @current_message_body == "#queue"
-          return_queue
+      elsif Guest.where(user_id: @current_user.id).last
+        current_guest_info = Guest.where(user_id: @current_user.id).last
+        current_party_id = current_guest_info.party_id
+        @current_party = Party.find_by(id: current_party_id)
+        if Time.now < @current_party.party_expiry
+          if @current_message_body == "#queue"
+            return_queue
+          else
+            reply("Your song, #{@current_message_body}, has been added to the queue")
+            getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
+          end
         else
-          reply("Your song, #{@current_message_body}, has been added to the queue")
-          getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
+          reply("You cannot add any more songs, party is over. Stay safe!")
         end
       else
-        reply("You cannot add any more songs, party is over. Stay safe!")
+        reply("Don't send us garbage!")
       end
-    else
-      reply("Don't send us garbage!")
     end
   end
+
 
 
   def reply(message)
@@ -71,6 +73,7 @@ class SmsController < ApplicationController
 
     reply(message.join(" "))
   end
+
 end
 
 
