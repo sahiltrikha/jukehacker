@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20140323194310) do
     t.integer  "downvotes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "total_votes"
   end
 
   create_table "queued_songs", force: true do |t|
@@ -65,6 +66,7 @@ ActiveRecord::Schema.define(version: 20140323194310) do
     t.integer  "downvotes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "total_votes"
   end
 
   create_table "rules", force: true do |t|

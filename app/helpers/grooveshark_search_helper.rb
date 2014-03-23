@@ -17,16 +17,13 @@ module GroovesharkSearchHelper
 
     #Step 3:  Evaluate whether Song should be played
     evaluatePartyRules(@jukebox_song, party_id)
-    binding.pry
 
     #Step 4:  If Song is allowed, add song to Song Queue
     unless @song_rejected
      QueuedSong.create(
-      {party_id: party_id, song_id: @jukebox_song.id, user_id: user_id}
+      {party_id: party_id, song_id: @jukebox_song.id, user_id: user_id, upvotes: 0, downvotes: 0, total_votes: 0}
       )
     end 
-    binding.pry
-
   end   
   
   def addSong(song)

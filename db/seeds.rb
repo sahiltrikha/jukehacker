@@ -13,7 +13,7 @@ Party.destroy_all
 Song.destroy_all
 QueuedSong.destroy_all
 PlayedSong.destroy_all
-Rules.destroy_all
+Rule.destroy_all
 Guest.destroy_all
 
 # Creates User
@@ -88,7 +88,8 @@ queue_song1 = QueuedSong.create(
   song_id: song1.id, 
   user_id: user1.id, 
   upvotes: 0, 
-  downvotes: 0 
+  downvotes: 0, 
+  total_votes: 0
   )
 
 queue_song2 = QueuedSong.create(
@@ -96,7 +97,8 @@ queue_song2 = QueuedSong.create(
   song_id: song2.id, 
   user_id: user1.id, 
   upvotes: 0, 
-  downvotes: 0 
+  downvotes: 0,
+  total_votes: 0
   )
 
 queue_song3 = QueuedSong.create(
@@ -104,7 +106,8 @@ queue_song3 = QueuedSong.create(
   song_id: song3.id, 
   user_id: user1.id, 
   upvotes: 0, 
-  downvotes: 0 
+  downvotes: 0,
+  total_votes: 0
   )
 
 rule1 = Rule.create(
@@ -112,3 +115,10 @@ rule1 = Rule.create(
   condition: "artist", 
   banned_value: "Justin Beiber"
   )
+
+rule2 = Rule.create(
+  party_id: party1.id, 
+  condition: "title", 
+  banned_value: "Bye Bye Bye"
+  )
+
