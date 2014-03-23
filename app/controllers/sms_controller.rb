@@ -64,13 +64,16 @@ class SmsController < ApplicationController
 
   def return_queue
     message = [];
-    @queued_songs = QueuedSong.where(party_id: @current_party.id)
+    # @queued_songs = QueuedSong.where(party_id: @current_party.id)
+    @queued_songs = @current_party.queued_songs.order(total_votes: :desc)
     @songs = @queued_songs.map do |queued_song|
       Song.find(queued_song.song_id)
     end
     @songs.each_with_index do |song, index|
       message << (index+1) + " " + song.title
     end
+
+
 
     reply(message.join(" "))
   end
