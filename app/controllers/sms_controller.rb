@@ -26,31 +26,56 @@ class SmsController < ApplicationController
           Guest.create(user_id: @current_user.id, party_id: current_party.id)#find party by message and add user
           reply("Congrats! You've joined #{current_party.party_key}")#reply "CONGRATS HOMIE. reply for requests"
         end
-      elsif Guest.where(user_id: @current_user.id).last
-        current_guest_info = Guest.where(user_id: @current_user.id).last
-        current_party_id = current_guest_info.party_id
-        current_party = Party.find_by(id: current_party_id)
-        if Time.now < current_party.party_expiry
+
+      ##guest has joined a party at this point
+    elsif Guest.where(user_id: @current_user.id).last
+      current_guest_info = Guest.where(user_id: @current_user.id).last
+      current_party_id = current_guest_info.party_id
+      @current_party = Party.find_by(id: current_party_id)
+      if Time.now < @current_party.party_expiry
+        if @current_message_body == "#queue"
+          return_queue
+        else
           reply("Your song, #{@current_message_body}, has been added to the queue")
           getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
-        else
-          reply("You cannot add any more songs, party is over. Stay safe!")
         end
       else
-        reply("Don't send us garbage!")
+        reply("You cannot add any more songs, party is over. Stay safe!")
       end
+    else
+      reply("Don't send us garbage!")
     end
-
-    render ('index')
   end
 
-  def reply(message)
-    number_to_send_to = @current_message_sender
-    @twilio_client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
-    @twilio_client.account.sms.messages.create(
-      :from => "+1#{TWILIO_PHONE_NUMBER}",
-      :to => number_to_send_to,
-      :body => "#{message}"
-    )
-  end
+  render ('index')
 end
+
+def reply(message)
+  number_to_send_to = @current_message_sender
+  @twilio_client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
+  @twilio_client.account.sms.messages.create(
+    :from => "+1#{TWILIO_PHONE_NUMBER}",
+    :to => number_to_send_to,
+    :body => "#{message}"
+    )
+end
+
+def return_queue
+  message = [];
+  @queued_songs = QueuedSong.where(@current_party.id)
+  @songs = @queued_songs.map do |queued_song|
+    Song.find(queued_song.song_id)
+  end
+  @songs.each do |song|
+    message << song.title
+  end
+
+  reply(message.join(" "))
+end
+end
+
+
+
+
+
+
