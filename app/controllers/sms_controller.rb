@@ -25,7 +25,7 @@ class SmsController < ApplicationController
           reply("Sorry sir, the party has ended.")
         else
           Guest.create(user_id: @current_user.id, party_id: current_party.id)#find party by message and add user
-          reply("Congrats! You've joined #{current_party.party_key}")#reply "CONGRATS HOMIE. reply for requests"
+          reply("Congrats! You've joined #{current_party.party_key}. Text back #queue to see the current play list, or text back a song to add to the queue.")#reply "CONGRATS HOMIE. reply for requests"
         end
 
 
@@ -68,8 +68,8 @@ class SmsController < ApplicationController
     @songs = @queued_songs.map do |queued_song|
       Song.find(queued_song.song_id)
     end
-    @songs.each do |song|
-      message << song.title
+    @songs.each_with_index do |song, index|
+      message << (index+1) + " " + song.title
     end
 
     reply(message.join(" "))
