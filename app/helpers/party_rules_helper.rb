@@ -21,13 +21,15 @@ module PartyRulesHelper
 
   end 
 
-  def createRule(column_to_check, banned_item)
-    if Rule.where(condition: column_to_check, banned_value: banned_item).first.nil?
-      rule = Rule.create{condition: column_to_check, banned_value: banned_item}
-    else 
-      rule = Rule.where(condition: column_to_check, banned_value: banned_item).first
+  def addRule(column_to_check, banned_item)
+    unless banned_item == ""
+      if Rule.where(condition: column_to_check, banned_value: banned_item).first.nil?
+        rule = Rule.create({condition: column_to_check, banned_value: banned_item})
+      else 
+        rule = Rule.where(condition: column_to_check, banned_value: banned_item).first
+      end
+      return rule
     end
-    return rule
   end
 
 end 

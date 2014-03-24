@@ -1,24 +1,39 @@
 class PartiesController < ApplicationController
+  include PartyRulesHelper
+
   def new
     @party = Party.new
   end
 
   def create
-    @party = Party.create(party_params)
-    
+    binding.pry
+    @party = Party.new(party_params)
+
+    if @party.save
     # hard sets the expiration for the party at six hours in the future
-    @party.party_expiry = @party.created_at + 6.hours
-    @party.save
-    redirect_to "/party-dashboard/#{@party.id}"
+      @party.party_expiry = @party.created_at + 6.hours
+      @party.save
+      params[:tracks].each do |track|
+        @party.rules << addRule("track", track)
+      end
+
+      params[:artists].each do |artist|
+        @party.rules << addRule("artist", artist)
+      end
+      
+      redirect_to "/party-dashboard/#{@party.id}"
+    else
+      redirect_to request.referer
+    end
   end
 
-  def show
-    @party = Party.find(params[:id])
-  end
+def show
+  @party = Party.find(params[:id])
+end
 
-  private
+private
 
-  def party_params
-    params.require(:party).permit(:party_key)
-  end
+def party_params
+  params.require(:party).permit(:party_key)
+end
 end
