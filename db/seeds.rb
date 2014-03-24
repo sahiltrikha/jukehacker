@@ -60,6 +60,18 @@ party2 = Party.create(
   party_expiry: Time.now + 5*60 
   )
 
+party3 = Party.create(
+  host_id: host.id, 
+  party_key: "#wagparty2", 
+  party_expiry: Time.now - 5*60
+  )
+
+party4 = Party.create(
+  host_id: host.id, 
+  party_key: "#wagparty3", 
+  party_expiry: Time.now - 172*60
+  )
+
 # Creates Songs
 song1 = Song.create(
   grooveshark_id: 408271,
@@ -81,6 +93,21 @@ song3 = Song.create(
   artist: "Metallica",
   duration: 332000
   )
+
+song4 = Song.create(
+  grooveshark_id: 229996995,
+  title: "Award Tour",
+  artist: "Tribe Called Quest",
+  duration: 222093
+  )
+
+song5 = Song.create(
+  grooveshark_id: 25887138,
+  title: "The Trapeze Swinger",
+  artist: "Iron and Wine",
+  duration: 204693
+  )
+
 
 # Adds songs to the queue
 queue_song1 = QueuedSong.create(
@@ -110,15 +137,33 @@ queue_song3 = QueuedSong.create(
   total_votes: 0
   )
 
-rule1 = Rule.create(
-  party_id: party1.id, 
-  condition: "artist", 
-  banned_value: "Justin Beiber"
+played_song4 = PlayedSong.create(
+  party_id: party3.id, 
+  song_id: song4.id, 
+  user_id: user1.id, 
+  upvotes: 0, 
+  downvotes: 0,
+  total_votes: 0
   )
 
-rule2 = Rule.create(
-  party_id: party1.id, 
-  condition: "title", 
-  banned_value: "Bye Bye Bye"
+played_song5 = PlayedSong.create(
+  party_id: party4.id, 
+  song_id: song5.id, 
+  user_id: user1.id, 
+  upvotes: 0, 
+  downvotes: 0,
+  total_votes: 0
   )
+
+##FIX:  Update how Rules Engine Works
+# rule1 = Rule.create(
+#   condition: "artist", 
+#   banned_value: "Justin Beiber"
+#   )
+
+# rule2 = Rule.create( 
+#   condition: "title", 
+#   banned_value: "Bye Bye Bye"
+#   )
+
 

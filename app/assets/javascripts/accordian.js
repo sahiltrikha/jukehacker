@@ -1,3 +1,7 @@
   $(function() {
-    $( "#accordion" ).accordion();
+    $( "#accordion" ).accordion({
+      collapsible: true, 
+      active: false
+    });
+    
   });
