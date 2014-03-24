@@ -18,22 +18,20 @@ Guest.destroy_all
 
 # Creates User
 user1 = User.create(
-  phone_number: "+16103315573", 
-  first_name: "Michael", 
-  last_name: "Wagner"
+  phone_number: "+16103315573"
   )
 
 
 user2 = User.create(
   phone_number: "+16467524876", 
-  first_name: "Etan", 
-  last_name: "Berkowitz"
   )
 
 # Creates Host
 host = Host.create(
   user_id: user1.id, 
-  email: "michael.k.wagner@gmail.com", 
+  email: "michael.k.wagner@gmail.com",
+  first_name: "Michael", 
+  last_name: "Wagner", 
   password: "winner", 
   password_confirmation: "winner",
   zip: 10128
@@ -41,7 +39,9 @@ host = Host.create(
 
 host2 = Host.create(
   user_id: user2.id, 
-  email: "etan.berkowitz@gmail.com", 
+  email: "etan.berkowitz@gmail.com",
+  first_name: "Etan", 
+  last_name: "Berkowitz", 
   password: "donkeypiss", 
   password_confirmation: "donkeypiss",
   zip: 10024,
