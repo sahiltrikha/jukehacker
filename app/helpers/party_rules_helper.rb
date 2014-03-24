@@ -1,7 +1,7 @@
 module PartyRulesHelper
 
   def getPartyRules(party_id)
-    rules = Rule.where(party_id: party_id)
+    rules = Party.find(party_id).rules
     @rules_hash = {}
     conditions = rules.map {|rule| rule.condition}
     conditions.uniq!
@@ -23,12 +23,17 @@ module PartyRulesHelper
   end 
 
   def addRule(column_to_check, banned_item)
+    # this eliminates blank fields
     unless banned_item == ""
+      # this checks to see if the rule already exists
       if Rule.where(condition: column_to_check, banned_value: banned_item).first.nil?
+        # creates a new rule if it does not
         rule = Rule.create({condition: column_to_check, banned_value: banned_item})
       else 
+        # applies an existing rule if it does
         rule = Rule.where(condition: column_to_check, banned_value: banned_item).first
       end
+      # returns the rule object to be added
       return rule
     end
   end

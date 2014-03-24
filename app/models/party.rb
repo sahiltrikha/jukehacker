@@ -9,4 +9,11 @@ class Party < ActiveRecord::Base
 
   # validations
   validates :party_key, presence: true
+  validate :each_key_must_be_unique_when_valid, on: :create
+
+  def each_key_must_be_unique_when_valid
+    valid_keys = Party.select {|party| party.party_expiry > DateTime.now}
+    valid_keys.map! {|party| party.party_key}
+    errors.add(:party_key, "is already in use for a different party") if valid_keys.include?(self.party_key)
+  end
 end
