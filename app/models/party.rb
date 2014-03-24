@@ -9,4 +9,7 @@ class Party < ActiveRecord::Base
 
   # validations
   validates :party_key, presence: true
+
+  def each_key_must_be_unique_when_valid
+  end
 end
