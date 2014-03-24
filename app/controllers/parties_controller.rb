@@ -12,20 +12,26 @@ class PartiesController < ApplicationController
       # hard sets the expiration for the party at six hours in the future
       @party.party_expiry = @party.created_at + 6.hours
       @party.save
+
+      # creates tracks blacklist
       params[:tracks].each do |track|
         unless track == ""
           @party.rules << addRule("track", track)
         end
       end
 
+      # creates artist blacklist
       params[:artists].each do |artist|
         unless artist == ""
           @party.rules << addRule("artist", artist)
         end
       end
 
+      # redirects to the party dashboard
       redirect_to "/party-dashboard/#{@party.id}"
     else
+
+      # redirects back the the create screen
       redirect_to request.referer
     end
   end
