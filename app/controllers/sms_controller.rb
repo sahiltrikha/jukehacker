@@ -33,7 +33,7 @@ class SmsController < ApplicationController
           Guest.create(user_id: @current_user.id, party_id: current_party.id)
         ##if HOUSE RULES are fine
           #reply confirming party entrance"
-          reply("Congrats! You've joined #{current_party.party_key}. Text back #queue to see the current play list, or text back a song to add to the queue.")
+          reply("Welcome to #{current_party.party_key}! Text a song request or #queue for the playlist. Text #up or #down to vote for a song (ex. '#up 3')")
         end
 
 
@@ -46,13 +46,11 @@ class SmsController < ApplicationController
         if Time.now < @current_party.party_expiry
           if @current_message_body == "#queue"
             return_queue
-          elsif @current_message_body.include?("#upvote")
+          elsif @current_message_body.include?("#up")
             upvote
-          elsif @current_message_body.include?("#downvote")            
+          elsif @current_message_body.include?("#down")            
             downvote
           else
-            # reply("Your song, #{@current_message_body}, has been added to the queue")
-            reply("before getGrooveshark #{@current_message_body}, #{current_party_id}, #{@current_user.id}")
             confirmation_message = getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
             reply(confirmation_message)
           end
@@ -73,7 +71,7 @@ class SmsController < ApplicationController
     upvoted_song.upvotes += 1
     upvoted_song.total_votes += 1
     upvoted_song.save
-    reply("Thanks for upvoting!")
+    reply("Thanks for up voting!")
   end
   def downvote
     message = @current_message_body.split(" ")
@@ -83,7 +81,7 @@ class SmsController < ApplicationController
     upvoted_song.upvotes -= 1
     upvoted_song.total_votes -= 1
     upvoted_song.save
-    reply("Thanks for downvoting!")
+    reply("Thanks for down voting!")
   end
 
 
