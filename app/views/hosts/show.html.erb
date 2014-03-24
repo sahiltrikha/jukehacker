@@ -10,6 +10,29 @@
 <%end %>
 
 <h2>List of Past Parties</h2>
+
+<div id="accordion">
+  <%@past_parties.each do |party|%>
+  <h3 class="accordian-panel"><%=link_to party.party_key, party_path(party.id)%> </h3>
+    <div>
+      <p>
+      TEST INFO
+      </p>
+    </div>
+  <%end%>
+    <h3 class="accordian-panel">TEST 2 </h3>
+    <div>
+      <p>
+      TEST 2 INFO
+      </p>
+    </div>
+
+
+</div>
+
+
+
+
 <table>
   <tr>
     <th>Party Key</th>
