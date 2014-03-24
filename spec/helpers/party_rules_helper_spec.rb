@@ -5,8 +5,6 @@ describe "Party Rules Helper" do
   before do
      @user1 = User.create(
         phone_number: "+16103315573", 
-        first_name: "Michael", 
-        last_name: "Wagner"
       )
 
      @host = Host.create(
@@ -32,9 +30,10 @@ describe "Party Rules Helper" do
 
 
      @rule = Rule.create(  
-      party_id: @party1.id, 
       condition: "artist", 
       banned_value: "Justin Beiber")
+
+     @party1.rules << @rule
     end   
 
   describe "#getPartyRules"do 

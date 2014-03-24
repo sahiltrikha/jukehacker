@@ -137,6 +137,7 @@ queue_song3 = QueuedSong.create(
   total_votes: 0
   )
 
+
 played_song4 = PlayedSong.create(
   party_id: party3.id, 
   song_id: song4.id, 
@@ -153,7 +154,7 @@ played_song5 = PlayedSong.create(
   upvotes: 0, 
   downvotes: 0,
   total_votes: 0
-  )
+
 
 ##FIX:  Update how Rules Engine Works
 # rule1 = Rule.create(

@@ -20,9 +20,9 @@ class QueuedSongsController < ApplicationController
   def get_next_song
     # Finds the oldest song remaining to play for a given party
     unless QueuedSong.find_by(party_id: request.referer.split("/").last.to_i).nil?
-      playlist = QueuedSong.find_by(party_id: request.referer.split("/").last.to_i)
+      playlist = QueuedSong.where(party_id: request.referer.split("/").last.to_i)
       ordered_playlist = playlist.order(total_votes: :desc)
-      @song = ordered_playlist.first
+      @song = ordered_playlist.first.song
     else
       @song = ["DONE"]
     end
