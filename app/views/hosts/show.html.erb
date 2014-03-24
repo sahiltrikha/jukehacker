@@ -1,1 +1,30 @@
 <h1>Host Page</h1>
+
+
+<h2>Want to Party Now? </h2>
+
+<%if @current_party.nil?%>
+  <button>Start a Party</button>
+<%else%>
+  <a href="/party-dashboard/<%=@current_party.id%>" >Join <%=@current_party.party_key%> Right now!</a>
+<%end %>
+
+<h2>List of Past Parties</h2>
+<table>
+  <tr>
+    <th>Party Key</th>
+    <th>Party Start</th>
+    <th>Party Expired</th>
+  </tr>
+
+  <tr>
+    <%@past_parties.each do |party|%>
+    <td><%=link_to party.party_key, party_path(party.id)%></td>
+    <td><%=party.created_at%></td>
+    <td><%=party.party_expiry%></td>
+    <%end%> 
+  </tr>
+
+</table>
+
+
