@@ -11,8 +11,15 @@ class SmsController < ApplicationController
     #to specify twilio's incoming messages (not outgoing responses)
     unless @current_message_sender == "+19083005599"
       
-      @current_user = get_current_user
-
+      #phone number is NOT in User Database
+      if User.find_by(phone_number: @current_message_sender).nil?
+        #create user in database
+        @current_user = User.create(phone_number: @current_message_sender)
+      else
+        #look up user in database
+        @current_user = User.find_by(phone_number: @current_message_sender)
+      end
+ 
       #If user texts a proper party key
       if Party.find_by(party_key: @current_message_body).present?
         current_party = Party.find_by(party_key: @current_message_body)
@@ -102,17 +109,9 @@ class SmsController < ApplicationController
     reply(message.join(" "))
   end
 
-  def get_current_user
-    #phone number is NOT in User Database
-    if User.find_by(phone_number: @current_message_sender).nil?
-      #create user in database
-      current_user = User.create(phone_number: @current_message_sender)
-    else
-      #look up user in database
-      current_user = User.find_by(phone_number: @current_message_sender)
-    end
-    return current_user
-  end
+  # def get_current_user
+  #   nil
+  # end
 
 end
 
