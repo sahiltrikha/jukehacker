@@ -49,8 +49,8 @@ module GroovesharkSearchHelper
     artist_name = artist.gsub(" ","+")
     song_name = song.gsub(" ","+")
 
-
-    from_itunes = HTTParty.get("http://itunes.apple.com/search?term=#{song_name}&artistName=#{artist_name}&limit=10")
+    itunes_search = I18n.transliterate("http://itunes.apple.com/search?term=#{song_name}&artistName=#{artist_name}&limit=10")
+    from_itunes = HTTParty.get(itunes_search)
 
     from_itunes_as_hash = JSON(from_itunes)
 
