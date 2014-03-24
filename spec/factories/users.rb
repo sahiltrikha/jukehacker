@@ -2,5 +2,6 @@
 
 FactoryGirl.define do
   factory :user do
+    phone_number "2032470080"
   end
 end
