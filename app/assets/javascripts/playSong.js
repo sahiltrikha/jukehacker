@@ -18,7 +18,7 @@ var playSong = function(){
       // when a song object is returned
     }else{
       // appends a new player with the correct song
-      $("#player").append("<object type='application/x-shockwave-flash' data='http://grooveshark.com/songWidget.swf' width='0' height='1'><param name='wmode' value='window' /><param name='allowScriptAccess' value='always' /><param name='flashvars' value='hostname=cowbell.grooveshark.com&songIDs=" + song.grooveshark_id + "&style=metal&p=1' /></object>");
+      $("#player").append("<object type='application/x-shockwave-flash' data='http://grooveshark.com/songWidget.swf' width='500' height='501'><param name='wmode' value='window' /><param name='allowScriptAccess' value='always' /><param name='flashvars' value='hostname=cowbell.grooveshark.com&songIDs=" + song.grooveshark_id + "&style=metal&p=1' /></object>");
       
       // posts the song object to the played songs table
       $.post('/startsong', {song_id: song.id, party_id: window.location.href.split("/")[4]});
