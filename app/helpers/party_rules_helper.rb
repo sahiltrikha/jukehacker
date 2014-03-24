@@ -1,7 +1,7 @@
 module PartyRulesHelper
 
   def getPartyRules(party_id)
-    rules = Rule.where(party_id: party_id)
+    rules = Party.find(party_id).rules
     @rules_hash = {}
     conditions = rules.map {|rule| rule.condition}
     conditions.uniq!

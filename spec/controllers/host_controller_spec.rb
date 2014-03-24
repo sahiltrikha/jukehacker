@@ -5,8 +5,6 @@ describe HostsController do
   describe "post #create" do 
     before do 
       @user = User.create({
-        first_name: "Michael" ,
-        last_name: "Wagner" , 
         phone_number: "6104414423" 
         })
     end

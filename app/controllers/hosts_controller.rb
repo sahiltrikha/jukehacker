@@ -13,8 +13,6 @@ class HostsController < ApplicationController
     
     if user == nil
       new_user = User.create({ 
-        first_name: params["host"]["first_name"],
-        last_name: params["host"]["last_name"],
         phone_number: params["host"]["cell_phone"]
         })
       @host.user_id = new_user.id
@@ -27,11 +25,11 @@ class HostsController < ApplicationController
       session["host_id"]=@host_id
       redirect_to host_path(@host)
     else 
-      render(:new)
+      redirect_to request.referer
     end 
 
   end 
-    
+
 
 
 
