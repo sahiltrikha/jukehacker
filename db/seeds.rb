@@ -154,7 +154,7 @@ played_song5 = PlayedSong.create(
   upvotes: 0, 
   downvotes: 0,
   total_votes: 0
-
+)
 
 ##FIX:  Update how Rules Engine Works
 # rule1 = Rule.create(
