@@ -52,6 +52,7 @@ class SmsController < ApplicationController
             downvote
           else
             # reply("Your song, #{@current_message_body}, has been added to the queue")
+            reply("before getGrooveshark #{@current_message_body}, #{current_party_id}, #{@current_user.id}")
             confirmation_message = getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
             reply(confirmation_message)
           end
