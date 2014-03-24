@@ -5,7 +5,7 @@ class Party < ActiveRecord::Base
   has_many :queued_songs
   has_many :played_songs
   belongs_to :host
-  has_many :rules
+  has_and_belongs_to_many :rules
 
   # validations
   validates :party_key, presence: true
