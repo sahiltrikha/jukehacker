@@ -48,6 +48,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'ffaker'
 end
+  gem 'pry-rails'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'

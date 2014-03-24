@@ -5,9 +5,10 @@ class SmsController < ApplicationController
 
   def req
     @client = Twilio::REST::Client.new TWILIO_SID, TWILIO_TOKEN
-    @current_message_body = @client.account.messages.list[0].body.downcase!
+    @current_message_body = @client.account.messages.list[0].body
+    @current_message_body.downcase!
     @current_message_sender = @client.account.messages.list[0].from
-
+    binding.pry
     #to specify twilio's incoming messages (not outgoing responses)
     unless @current_message_sender == "+19083005599"
       
