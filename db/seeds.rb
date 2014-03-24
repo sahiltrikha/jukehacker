@@ -51,13 +51,13 @@ host2 = Host.create(
 party1 = Party.create(
   host_id: host.id, 
   party_key: "#wagparty", 
-  party_expiry: Time.now + 5*60 
+  party_expiry: Time.now + 5*60*60 
   )
 
 party2 = Party.create(
   host_id: host2.id, 
   party_key: "#berkoparty", 
-  party_expiry: Time.now + 5*60 
+  party_expiry: Time.now + 5*60*60 
   )
 
 # Creates Songs
