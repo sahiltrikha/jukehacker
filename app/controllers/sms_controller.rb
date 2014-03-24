@@ -106,11 +106,12 @@ class SmsController < ApplicationController
     #phone number is NOT in User Database
     if User.find_by(phone_number: @current_message_sender).nil?
       #create user in database
-      return current_user = User.create(phone_number: @current_message_sender)
+      current_user = User.create(phone_number: @current_message_sender)
     else
       #look up user in database
-      return current_user = User.find_by(phone_number: @current_message_sender)
+      current_user = User.find_by(phone_number: @current_message_sender)
     end
+    return current_user
   end
 
 end
