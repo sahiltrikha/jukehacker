@@ -8,7 +8,7 @@ class SmsController < ApplicationController
     @current_message_body = @client.account.messages.list[0].body
     @current_message_body.downcase!
     @current_message_sender = @client.account.messages.list[0].from
-    binding.pry
+
     #to specify twilio's incoming messages (not outgoing responses)
     unless @current_message_sender == "+19083005599"
       
@@ -109,10 +109,6 @@ class SmsController < ApplicationController
     end
     reply(message.join(" "))
   end
-
-  # def get_current_user
-  #   nil
-  # end
 
 end
 
