@@ -111,13 +111,11 @@ queue_song3 = QueuedSong.create(
   )
 
 rule1 = Rule.create(
-  party_id: party1.id, 
   condition: "artist", 
   banned_value: "Justin Beiber"
   )
 
 rule2 = Rule.create(
-  party_id: party1.id, 
   condition: "title", 
   banned_value: "Bye Bye Bye"
   )
