@@ -6,21 +6,24 @@ class PartiesController < ApplicationController
   end
 
   def create
-    binding.pry
     @party = Party.new(party_params)
 
     if @party.save
-    # hard sets the expiration for the party at six hours in the future
+      # hard sets the expiration for the party at six hours in the future
       @party.party_expiry = @party.created_at + 6.hours
       @party.save
       params[:tracks].each do |track|
-        @party.rules << addRule("track", track)
+        unless track == ""
+          @party.rules << addRule("track", track)
+        end
       end
 
       params[:artists].each do |artist|
-        @party.rules << addRule("artist", artist)
+        unless artist == ""
+          @party.rules << addRule("artist", artist)
+        end
       end
-      
+
       redirect_to "/party-dashboard/#{@party.id}"
     else
       redirect_to request.referer
