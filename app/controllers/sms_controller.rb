@@ -13,8 +13,6 @@ class SmsController < ApplicationController
       
       @current_user = get_current_user
 
-
-
       #If user texts a proper party key
       if Party.find_by(party_key: @current_message_body).present?
         current_party = Party.find_by(party_key: @current_message_body)
@@ -45,8 +43,9 @@ class SmsController < ApplicationController
           elsif @current_message_body.include?("#downvote")            
             downvote
           else
-            reply("Your song, #{@current_message_body}, has been added to the queue")
-            getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
+            # reply("Your song, #{@current_message_body}, has been added to the queue")
+            confirmation_message = getGrooveshark("#{@current_message_body}", current_party_id, @current_user.id)
+            reply(confirmation_message)
           end
         else
           reply("You cannot add any more songs, party is over. Stay safe!")

@@ -5,25 +5,34 @@ module GroovesharkSearchHelper
     #Step 1:  Get GrooveShart Information
     client = Grooveshark::Client.new
     song = client.search_songs(songstring).first
-    song_title = song.data["song_name"]
     
-    #Step 2:  Evalute whether Song is Stored on Song Table
-    @juke_song =  Song.find_by(title: song_title)
-    if @juke_song.nil?
-      addSong(song)
-    end
-    @jukebox_song = Song.find_by(grooveshark_id: song.data["song_id"])
-    
+    if song.nil?
+      return "The entry was invalid"
+    else
+      song_title = song.data["song_name"]
+      
+      #Step 2:  Evalute whether Song is Stored on Song Table
+      @juke_song =  Song.find_by(title: song_title)
+      if @juke_song.nil?
+        addSong(song)
+      end
+      @jukebox_song = Song.find_by(grooveshark_id: song.data["song_id"])
+      
 
-    #Step 3:  Evaluate whether Song should be played
+      #Step 3:  Evaluate whether Song should be played
     evaluatePartyRules(@jukebox_song, party_id)
+      # return "the song breaks the house rules"
 
-    #Step 4:  If Song is allowed, add song to Song Queue
-    unless @song_rejected
-     QueuedSong.create(
-      {party_id: party_id, song_id: @jukebox_song.id, user_id: user_id, upvotes: 0, downvotes: 0, total_votes: 0}
-      )
-    end 
+      #Step 4:  If Song is allowed, add song to Song Queue
+      if @song_rejected
+        return "You broke the party rules!"
+      else
+        queued_song = QueuedSong.create(
+        {party_id: party_id, song_id: @jukebox_song.id, user_id: user_id, upvotes: 0, downvotes: 0, total_votes: 0}
+        )
+        return "Your song #{queued_song.song.title} by #{queued_song.song.artist} was added to the queue!"
+      end
+    end
   end   
   
   def addSong(song)
