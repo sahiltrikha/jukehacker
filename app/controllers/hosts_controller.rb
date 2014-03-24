@@ -1,6 +1,8 @@
 class HostsController < ApplicationController
 
   def show
+    @current_party = Party.find_by("host_id = ? AND party_expiry > ?" , params[:id], Time.now())
+    @past_parties = Party.where("host_id = ? AND party_expiry < ?" , params[:id], Time.now())
   end 
 
   def create
