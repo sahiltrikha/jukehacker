@@ -14,8 +14,9 @@ module PartyRulesHelper
  
     @song_rejected = @rules_hash.map do 
       |condition,values|
-      values.include?(@jukebox_song.instance_eval(condition.to_s)) 
+      values.include?(song.instance_eval(condition.to_s)) 
     end 
+
 
     @song_rejected = @song_rejected.include?(true)
 
