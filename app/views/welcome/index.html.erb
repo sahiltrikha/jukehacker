@@ -1,11 +1,19 @@
 <div id="homepage-style">
     <span id="title">
         <h1 id="headline">JukeHacker</h1>
-        <span id="top-container">
-            <button class="subtitle2-button">Log In</button>
-            <span class="subtitle">|</span>
-            <button class="subtitle1-button">Sign Up</button>
-        </span>
+       
+        <%if session[:host_id].nil? %>
+            <span id="top-container">
+                <button class="subtitle2-button">Log In</button>
+                <span class="subtitle">|</span>
+                <button class="subtitle1-button">Sign Up</button>
+            </span>
+        <%else %>
+            <a href="/hosts/<%=session[:host_id]%>"><%=session[:first_name]%></a>
+            <%=link_to("Logout", session_path(session[:host_id]), method: "delete") %>
+        <%end%>
+
+        
     </span>
     
     <section id="login">
