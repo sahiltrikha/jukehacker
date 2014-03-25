@@ -5,7 +5,7 @@ var getQueue = function(){
     $("ol").children().remove()
     // this iterates over the pending playlist and adds them to the playlist
     response.forEach(function(song){
-      $("<li>").text("Song: " + song.title + ", Artist: " + song.artist).addClass("queue-item").appendTo("#song-playlist");
+      $("<li>").text("Song: " + song.title + ", Artist: " + song.artist).addClass("queue-item").fadeIn(50).appendTo("#song-playlist");
     });
   });
 };

@@ -17,7 +17,8 @@ Jukehacker::Application.routes.draw do
   get '/getnextsong', to: 'queued_songs#get_next_song'
   post '/startsong', to: 'played_songs#create'
   delete '/playingsong', to: 'queued_songs#destroy'
-
+  post '/queued_songs', to: 'queued_songs#create'
+  
   resources :users 
   resources :hosts
   resources :guests
