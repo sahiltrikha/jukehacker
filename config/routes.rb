@@ -27,6 +27,7 @@ Jukehacker::Application.routes.draw do
   resources :parties
   resources :played_songs
   resources :queued_songs
+  resources :sessions
   post "/sessions", to: "sessions#create"
 
 end

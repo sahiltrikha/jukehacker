@@ -23,14 +23,6 @@ h1 {
   margin: 0 0 10px 0;
 }
 
-h3.accordian-panel {
-
-}
-
-div.accordian-panel2 {
-
-}
-
 img {
   width: 4em;
   height: 4em;
@@ -142,5 +134,22 @@ button, input[type=submit] {
   background-color: rgba(0,0,0,0);
   border: none;
   margin: 0px;
-  text-align: center;
+  float: center;
+}
+
+.subtitle-link {
+ font-family:  "Open Sans", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  margin: 0px;
+  float: center; 
+}
+
+section h3 {
+  font-family: "Open Sans";
+  font-size: 16px;
 }

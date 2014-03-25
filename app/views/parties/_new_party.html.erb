@@ -1,14 +1,15 @@
-<h1>CREATE A PARTY</h1>
+<h2>CREATE A PARTY</h2>
 <%= form_for party do |f| %>
-  <%= f.label :party_key %>
-  <%= f.text_field :party_key %><br>
-  <%= f.label :banned_artists %><br>
-  <%= button_tag(type: 'button', id: 'add-banned-artists') do%>
-  <%= content_tag(:strong, '+') %>
-  <% end %><br>
-  <%= f.label :banned_tracks %><br>
-  <%= button_tag(type: 'button', id: 'add-banned-tracks') do%>
-  <%= content_tag(:strong, '+') %>
-  <% end %><br>
-  <%= f.submit "Rock On" %>
+<%= f.label :party_key %>
+<%= f.text_field :party_key %><br><br>
+
+<%= f.label :banned_artists %><br>
+<%= button_tag(type: 'button', id: 'add-banned-artists') do%>
+<%= content_tag(:strong, '+') %>
+<% end %>
+<br><br><%= f.label :banned_tracks %><br>
+<%= button_tag(type: 'button', id: 'add-banned-tracks') do%>
+<%= content_tag(:strong, '+') %>
+<% end %><br>
+<%= f.submit "Rock On" %>
 <% end %>

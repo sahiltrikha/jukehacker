@@ -1,24 +1,26 @@
 <%= form_for(host) do |f| %>
-  <%= f.label :first_name%>:
+  <%= f.label :first_name%>
   <%= f.text_field :first_name%> <br \>
 
-  <%= f.label :last_name%>:
+  <%= f.label :last_name%>
   <%= f.text_field :last_name%> <br \>
 
-  <%= f.label :email%>:
+  <%= f.label :email%>
   <%= f.text_field :email%> <br \>
 
-  <label >Cell Phone</label>:
+  <label>Cell Phone</label>
   <input id="cell_phone" name="host[cell_phone]" type="text"/> <br \>
   
-  <%= f.label :zip%>:
+  <%= f.label :zip%>
   <%= f.text_field :zip%> <br \>  
 
-  <%= f.label :password%>:
+  <%= f.label :password%>
   <%= f.password_field :password%> <br \>
 
-  <%= f.label :password_confirmation%>:
+  <%= f.label :password_confirmation%>
   <%= f.password_field :password_confirmation%> <br \>  
-
+  <br>
+  <br>
+  <br>
   <%= f.submit %> <br \>
 <% end %> 
