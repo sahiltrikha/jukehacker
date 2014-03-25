@@ -21,9 +21,9 @@
         <h3>Already a Host?  Click Login to Start a Party</h3>
         <%= form_tag "/sessions" do %>
         <%= label_tag :email %>
-        <%= email_field_tag :email, session[:email] %> </br>
+        <%= email_field_tag :email, session[:email] %> <br /> <br />
         <%= label_tag :password %>
-        <%= password_field_tag :password %> </br>
+        <%= password_field_tag :password %> <br />
         <br>
         <%= submit_tag "Log in" %>
         <%end%>
@@ -50,7 +50,7 @@
 
         <% @files.each do |file| %>
             <div class="draggable rotate">
-                <%= image_tag "albums/"+file %>
+                <%= image_tag "albums/"+file, :class => "rotating"  %>
             </div>
         <% end %>
     </span>
