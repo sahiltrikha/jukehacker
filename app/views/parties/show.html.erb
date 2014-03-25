@@ -1,3 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%= stylesheet_link_tag "play" %>
+</head>
+<body>
+    <div class="navbar">
+  <!--[if lt IE 9]>
+    <div class="legacy-ie-fix"></div>
+    <![endif]-->
+    <div class="left"><big>JukeHacker</big></div>
+    <div class="center">Text <b><%= @party.party_key %></b> to 908-300-5599</div> 
+    <div class="right"><big>Profile | Logout</big></div>
+    </div>
+
+<br>
+
+<div id="splitting-page">
+
+
+
+    <div id="column-left">
+
+
+        <ol >
+            <li>
+                <div class="queue" id="queue-0">
+                    <!-- <img class="queue-art" src="http://a1.mzstatic.com/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg" />
+                    <span class="queue-text">
+                        <p>Title: Come Together</p>
+                        <p>Artist: The Beatles</p>
+                    </span> -->
+                </div>
+            </li>
+
+            <li>
+                <div class="queue" id="queue-1">
+                    <img class="queue-art" src="http://a1.mzstatic.com/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg" />
+                    <span class="queue-text">
+                        <p>Title: Come Together</p>
+                        <p>Artist: The Beatles</p>
+                    </span>
+                </div>
+            </li>
+
+            <li>
+                <div class="queue" id="queue-2">
+                    <img class="queue-art" src="http://a1.mzstatic.com/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg" />
+                    <span class="queue-text">
+                        <p>Title: Come Together</p>
+                        <p>Artist: The Beatles</p>
+                    </span>
+                </div>
+            </li>
+
+            <li>
+                <div class="queue" id="queue-3">
+                    <img class="queue-art" src="http://a1.mzstatic.com/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg" />
+                    <span class="queue-text">
+                        <p>Title: Come Together</p>
+                        <p>Artist: The Beatles</p>
+                    </span>
+                </div>
+            </li>
+
+            <li>
+                <div class="queue" id="queue-4">
+                    <img class="queue-art" src="http://a1.mzstatic.com/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg" />
+                    <span class="queue-text">
+                        <p>Title: Come Together</p>
+                        <p>Artist: The Beatles</p>
+                    </span>
+                </div>
+            </li>
+
+            <li>
+                <div class="queue"  id="queue-5">
+                    <img class="queue-art" src="http://a1.mzstatic.com/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg" />
+                    <span class="queue-text">
+                        <p>Title: Come Together</p>
+                        <p>Artist: The Beatles</p>
+                    </span>
+                </div>
+            </li>
+
+            <li>
+                <div class="queue" id="queue-6">
+                    <img class="queue-art" src="http://a1.mzstatic.com/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg" />
+                    <span class="queue-text">
+                        <p>Title: Come Together</p>
+                        <p>Artist: The Beatles</p>
+                    </span>
+                </div>
+            </li>
+
+            <li>
+                <div class="queue" id="queue-7">
+                    <img class="queue-art" src="http://a1.mzstatic.com/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg" />
+                    <span class="queue-text">
+                        <p>Title: Come Together</p>
+                        <p>Artist: The Beatles</p>
+                    </span>
+                </div>
+            </li>
+
+            <li>
+                <div class="queue" id="queue-8">
+                    <img class="queue-art" src="http://a1.mzstatic.com/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg" />
+                    <span class="queue-text">
+                        <p>Title: Come Together</p>
+                        <p>Artist: The Beatles</p>
+                    </span>
+                </div>
+            </li>
+
+            <li>
+                <div class="queue" id="queue-9">
+                    <img class="queue-art" src="http://a1.mzstatic.com/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg" />
+                    <span class="queue-text">
+                        <p>Title: Come Together</p>
+                        <p>Artist: The Beatles</p>
+                    </span>
+                </div>
+            </li> 
+          </ol>
+
+        </div> 
+        <!-- Ending of left column contents -->
+
+        <div id="play">
+            <img src="http://olsenbloom.files.wordpress.com/2009/12/rubber-soul.jpg" width="300" height="300" />
+
+            <span id="bar-container">
+                <ul class="bars active">
+                  <li class="bar1"></li>
+                  <li class="bar2"></li>
+                  <li class="bar3"></li>
+                  <li class="bar4"></li>
+                  <li class="bar5"></li>
+                  <li class="hidden"></li>
+              </ul>
+          </span>
+          <span id="play-text">
+            <p>Title: Taxman | Artist: The Beatles</p>
+
+        </span>
+    </div>
+<br>
+<span id="search-container">
+    <div id="search">
+    <form id="song-add">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" id="token">
+      <label>Add Song: <input type="search" id="new-song-name"/></label>
+      <button>Submit</button>
+    </form>
+    </div>
+
+</span>
+
+
+</div>
+
+
+</body>
+
+
+</html>
+
+
+<!-- this is where shit hits the fan. -->
+
+ <!-- 
 <h1>Text <%= @party.party_key %> to 908-300-5599 to Join the Party</h1>
 <h2>Then text back with your song requests!</h2>
 <form id="song-add">
@@ -5,6 +177,7 @@
   <label>Add Song: <input type="search" id="new-song-name"/></label>
   <button>Submit</button>
 </form>
+
 
 <ol id="song-playlist">
 </ol>
@@ -20,3 +193,4 @@ button.addEventListener("click", function(){
 });
 
 </script>
+ -->
