@@ -18,12 +18,13 @@
     
     <section id="login">
         <h3>Already a Host?  Click Login to Start a Party</h3>
-        <%=form_tag "/sessions" do %>
+        <%= form_tag "/sessions" do %>
         <%= label_tag :email %>
         <%= email_field_tag :email, session[:email] %> </br>
         <%= label_tag :password %>
         <%= password_field_tag :password %> </br>
-        <%= submit_tag "Log in!" %>
+        <br>
+        <%= submit_tag "Log in" %>
         <%end%>
         <% unless session[:message].nil? %>
             <section id="errors">

@@ -142,5 +142,10 @@ button, input[type=submit] {
   background-color: rgba(0,0,0,0);
   border: none;
   margin: 0px;
-  text-align: center;
+  float: center;
+}
+
+section h3 {
+  font-family: "Open Sans";
+  font-size: 16px;
 }

@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+form div {
+  display: none;
+}
+
+form label {
+  font-family: "Open Sans", sans-serif;
+  display: inline-block;
+  float: left;
+  clear: right;
+}
+
+form input {
+  font-family: "Open Sans", sans-serif;
+  display: inline-block;
+  float: right;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+form input[type=submit]{
+  float: center;
+  clear: both;
+  text-align: center;
+  
+}
+
+form input[type=button] {
+  padding: 10px;
+}
+
+#form h2 {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+#form {
+  width: 50%;
+}
