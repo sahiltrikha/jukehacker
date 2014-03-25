@@ -10,21 +10,22 @@
 <%end %>
 
 <h2>List of Past Parties</h2>
-<table>
-  <tr>
-    <th>Party Key</th>
-    <th>Party Start</th>
-    <th>Party Expired</th>
-  </tr>
-
-  <tr>
-    <%@past_parties.each do |party|%>
-    <td><%=link_to party.party_key, party_path(party.id)%></td>
-    <td><%=party.created_at%></td>
-    <td><%=party.party_expiry%></td>
-    <%end%> 
-  </tr>
-
-</table>
 
 
+<div id="accordion">
+  <%@past_parties.each do |party|%>
+  <h3 class="accordian-panel"><%=link_to party.party_key, party_path(party.id)%> </h3>
+    <div>
+      <p>
+
+      <%unless party.songs.nil?%>
+          Set List:<br>
+        <%party.songs.each_index do |i|%>
+          <%=party.songs_time[i].strftime("%l:%M %P")+' '+party.songs[i].title+" "+'('+party.songs[i].artist+')'%>
+        <%end%>  
+      <%end%>
+      </p>
+    </div>
+  <%end%>
+
+</div>

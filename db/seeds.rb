@@ -18,22 +18,20 @@ Guest.destroy_all
 
 # Creates User
 user1 = User.create(
-  phone_number: "+16103315573", 
-  first_name: "Michael", 
-  last_name: "Wagner"
+  phone_number: "+16103315573"
   )
 
 
 user2 = User.create(
   phone_number: "+16467524876", 
-  first_name: "Etan", 
-  last_name: "Berkowitz"
   )
 
 # Creates Host
 host = Host.create(
   user_id: user1.id, 
-  email: "michael.k.wagner@gmail.com", 
+  email: "michael.k.wagner@gmail.com",
+  first_name: "Michael", 
+  last_name: "Wagner", 
   password: "winner", 
   password_confirmation: "winner",
   zip: 10128
@@ -41,7 +39,9 @@ host = Host.create(
 
 host2 = Host.create(
   user_id: user2.id, 
-  email: "etan.berkowitz@gmail.com", 
+  email: "etan.berkowitz@gmail.com",
+  first_name: "Etan", 
+  last_name: "Berkowitz", 
   password: "donkeypiss", 
   password_confirmation: "donkeypiss",
   zip: 10024,
@@ -58,6 +58,18 @@ party2 = Party.create(
   host_id: host2.id, 
   party_key: "#berkoparty", 
   party_expiry: Time.now + 5*60*60 
+  )
+
+party3 = Party.create(
+  host_id: host.id, 
+  party_key: "#wagparty2", 
+  party_expiry: Time.now - 5*60
+  )
+
+party4 = Party.create(
+  host_id: host.id, 
+  party_key: "#wagparty3", 
+  party_expiry: Time.now - 172*60
   )
 
 # Creates Songs
@@ -81,6 +93,21 @@ song3 = Song.create(
   artist: "Metallica",
   duration: 332000
   )
+
+song4 = Song.create(
+  grooveshark_id: 229996995,
+  title: "Award Tour",
+  artist: "Tribe Called Quest",
+  duration: 222093
+  )
+
+song5 = Song.create(
+  grooveshark_id: 25887138,
+  title: "The Trapeze Swinger",
+  artist: "Iron and Wine",
+  duration: 204693
+  )
+
 
 # Adds songs to the queue
 queue_song1 = QueuedSong.create(
@@ -110,13 +137,34 @@ queue_song3 = QueuedSong.create(
   total_votes: 0
   )
 
-rule1 = Rule.create(
-  condition: "artist", 
-  banned_value: "Justin Beiber"
+
+played_song4 = PlayedSong.create(
+  party_id: party3.id, 
+  song_id: song4.id, 
+  user_id: user1.id, 
+  upvotes: 0, 
+  downvotes: 0,
+  total_votes: 0
   )
 
-rule2 = Rule.create(
-  condition: "title", 
-  banned_value: "Bye Bye Bye"
-  )
+played_song5 = PlayedSong.create(
+  party_id: party4.id, 
+  song_id: song5.id, 
+  user_id: user1.id, 
+  upvotes: 0, 
+  downvotes: 0,
+  total_votes: 0
+)
+
+##FIX:  Update how Rules Engine Works
+# rule1 = Rule.create(
+#   condition: "artist", 
+#   banned_value: "Justin Beiber"
+#   )
+
+# rule2 = Rule.create( 
+#   condition: "title", 
+#   banned_value: "Bye Bye Bye"
+#   )
+
 
