@@ -145,17 +145,7 @@ button, input[type=submit] {
   float: center;
 }
 
-form div {
-  display: none;
-}
-
-form label {
-  float: left;
-  margin-bottom: 50px;
-  display: block;
-}
-
-form input[type=text] {
-  text-align: right;
-  margin-bottom: 20px;
+section h3 {
+  font-family: "Open Sans";
+  font-size: 16px;
 }

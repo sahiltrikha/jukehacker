@@ -15,7 +15,8 @@
         <%= email_field_tag :email, session[:email] %> </br>
         <%= label_tag :password %>
         <%= password_field_tag :password %> </br>
-        <%= submit_tag "Log in!" %>
+        <br>
+        <%= submit_tag "Log in" %>
         <%end%>
         <% unless session[:message].nil? %>
             <section id="errors">
