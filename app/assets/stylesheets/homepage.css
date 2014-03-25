@@ -3941,7 +3941,7 @@ button, input[type=submit] {
 }
 
 form div {
-  color: rgba(0,0,0,0);
+  display: none;
 }
 
 form label {
