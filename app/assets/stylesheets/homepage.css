@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Righteous);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 /*body {
   text-align: center;
   padding: 20px;
@@ -33,7 +34,7 @@ img {
 }
 
 #title {
-  text-align: left;
+  text-align: center;
 }
 
 .subtitle {
@@ -41,7 +42,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.5em;
   font-size: 14px;
-
+  padding-left: 8px;
 }
 
 .subtitle a {
@@ -3908,3 +3909,14 @@ div:nth-child(200) {
   }
 }
 
+button, input[type=submit] {
+  font-family:  "Open Sans", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  margin: 0px;
+  text-align: center;
+}
