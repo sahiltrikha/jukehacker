@@ -1,7 +1,8 @@
 <h1>Text <%= @party.party_key %> to 908-300-5599 to Join the Party</h1>
 <h2>Then text back with your song requests!</h2>
 <form id="song-add">
-  <label>Add Song: <input type="search"/></label>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden" id="token">
+  <label>Add Song: <input type="search" id="new-song-name"/></label>
   <button>Submit</button>
 </form>
 

@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/css?family=Righteous);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/*body {
+  text-align: center;
+  padding: 20px;
+  background: #f4ecde;
+  border-radius: 50%;
+}
+*/
+section {
+  display: none;
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+  text-transform: uppercase;
+  font-size: 72px;
+  letter-spacing: 0.25em;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  text-shadow: -1px 1px 0 black, -2px 2px 0 black, -3px 3px 0 black, -4px 4px 0 black, -5px 5px 0 black, 7px 8px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 0 10px 0;
+}
+
+h3.accordian-panel {
+
+}
+
+div.accordian-panel2 {
+
+}
+
+img {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+}
+
+#headline{
+  margin-left: -75px;
+}
+
+#title {
+  text-align: center;
+}
+
+.subtitle {
+  font-family: 'Righteous', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+.subtitle a {
+  text-decoration: none;
+  border-bottom: 1px dotted #ccc;
+  color: black;
+}
+
+/*Forms*/
+#login-form {
+
+}
+
+
+
+/* MOVING TILE CSS */
+body {
+  background: #f4ecde;
+}
+
+#homepage-style {
+  padding: 0;
+  margin: 5% auto;
+  width: 30em;
+  position: relative;
+  text-align: center;
+}
+
+.rotate {
+  width: 4em;
+  height: 4em;
+  margin-left: -2em;
+  margin-top: -2em;
+  float: left;
+  background: #21a08f;
+  border-radius: 50%;
+  animation-name: animation;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0.01s;
+  -webkit-animation-name: animation;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0.01s;
+  -moz-animation-name: animation;
+  -moz-animation-duration: 6s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 0.01s;
+}
+/* Colors and push to right */
+/* Multiple $i x 0.1 */
+@keyframes animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes animation {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+button, input[type=submit] {
+  font-family:  "Open Sans", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  margin: 0px;
+  text-align: center;
+}

@@ -36,6 +36,8 @@ class HostsController < ApplicationController
     end 
 
 
+
+    @party = Party.new
   end 
 
   def create

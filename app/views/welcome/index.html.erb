@@ -1,27 +1,238 @@
-<h1>Welcome</h1>
+<div id="homepage-style">
+    <span id="title">
+        <h1 id="headline">JukeHacker</h1>
+        <span id="top-container">
+            <button class="subtitle2-button">Log In</button>
+            <span class="subtitle">|</span>
+            <button class="subtitle1-button">Sign Up</button>
+        </span>
+    </span>
+    
+    <section id="login">
+        <h3>Already a Host?  Click Login to Start a Party</h3>
+        <%=form_tag "/sessions" do %>
+        <%= label_tag :email %>
+        <%= email_field_tag :email, session[:email] %> </br>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %> </br>
+        <%= submit_tag "Log in!" %>
+        <%end%>
+        <% unless session[:message].nil? %>
+            <section id="errors">
+                <em><%= session[:message] %></em>
+            </section>
+        <% end %>
 
-<h3>Already a Host?  Login to start a Party</h3>
-<div>
-  <%=form_tag "/sessions" do %>
-    <%= label_tag :email %>
-    <%= email_field_tag :email, session[:email] %>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+    </section>
 
-    <%=submit_tag "Log in!" %>
-  <%end%>
+    <section id="sign_up">
+        <h3>First Time Hosting?  Click Sign Up and Prepare to Party</h3>    
+        <%= render partial: "hosts/sign_up", locals: {host: @host} %>
+    </section>
+
+
+
+<span id="container">
+<br />
+<br />
+<br />
+<br />
+<br />
+
+    <div class="draggable rotate"><img src="http://sfloman.com/ledzep_houses.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/molly.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/mitchell_hissing.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/mahavishnu_between.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/manowar.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/john_tumbleweed.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/ironmaiden_piece.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/joy_unknown.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/killingjoke.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/ledzep_4.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/matthews_under.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/marley_catch.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/lynyrd_street.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/madonna_virgin.gif" /></div>
+    <div class="draggable rotate"><img src="http://i7.minus.com/jbi8XxF4XaZ3bw_e.jpg" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/lennon_plastic.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/love_forever.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/ironmaiden_brave.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/john_captain.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/isis_panopticon.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/moody_days.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/thompson_shoot.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/tool_aenima.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/u2_achtung.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/walker_3.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/wilco_yankee.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/who_next.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/young_everybody.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/zappa_hot.gif" /></div>
+    <div class="draggable rotate"><img src="http://i2.minus.com/jxLnsmkYezM8Z_e.jpg" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/redhot_californication.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/replacements_let.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/rollingstones_satanic.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/sigurros_agaetis.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/spirit.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/springsteen_nebraska.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/stooges_fun.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/talk_laughing.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/rage.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/radiohead_kid.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/rainbow.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/prodigy_fat.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/primal_scream.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/portishead_dummy.gif" /></div>
+    <div class="draggable rotate"><img src="http://i3.minus.com/jbzuBv2LQuq8zg_e.jpg" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/pinkfloyd_animals.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/pinkfloyd_piper.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/pinkfloyd_saucerful.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/pavement_slanted.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/pet_very.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/nirvana_nevermind.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/pantera_vulgar.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/parliament_mother.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/orleans.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/nelson_stardust.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/mybloody_loveless.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/neutral_aeroplane.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/ironmaiden_killers.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/husker_warehouse.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/husker_candy.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/husker_zen.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/harrison_wonderwall.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/funkadelic_hardcore.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/garbage.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/green_american.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/marvingaye_wgo.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/gastr_upgrade.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/guns_appetite" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/gybe.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/funkadelic_standing.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/flamin_teenage.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/fleetwood_tango.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/echo_ocean.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/echo_porcupine.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/echo_heaven.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/dylan_basement.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/dylan_free.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/dylan_highway.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/doors_doors.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/dukes.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/drake_pink.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/dead_fresh.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/dj_entroducing.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/derek_layla.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/creedence_green.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/cure_disintegration.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/cure_wish.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/davis_sketches.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/clash_clash.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/cash_american.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/cars_candy.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/caravan_land.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/byrds_notorious.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/buffalo_again.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/buenavista.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/browne_late.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/bowie_ziggy.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/boston.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/boc_onyourfeet.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/blur_parklife.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/blondie_parallel.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/blacksabbath_sabotage.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/blacksabbath_bloody.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/blacksabbath_blacksabbath.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/blackflag_damaged.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/bjork_homogenic.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/beatles_white.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/beatles_abbey.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/bell_cosmos.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/beck_odelay.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/beatles_revolver.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/band_bigpink.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/anthrax_fistful.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/amorphis.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/amc_sanfran.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/amc_mercury.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/amc_everclear.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/alpert_dip.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/acdc_blood.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/aic_aic.gif" /></div>
+    <div class="draggable rotate"><img src="http://sfloman.com/aic_jar.gif" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/82c6ee67895bc91254192910eb8102fb/3706042.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/f7a020ce6203ca7084db08fd5a33b976/1804682.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/61cca66e39814e6faea0e403f913e979/2079442.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/3581a817e570bae32f240f51251946e1/2515506.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/513120f17d175c15bf6dfe770af09d4b/4977765.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/5b3d551daad88c2282bcf2cb369ce6ce/1236533.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/e1c370156f66732c6ff43793948d4957/2823113.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/63ae72381558c0aeec2951d38aa3c3fa/1271400.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/e441c4ad39761e213689e665aedb32da/1208413.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/c6adc1e2944585783a77f08c42d3807f/1764033.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/1d1ddef3a0e6bdeaea5f1a5dc56f118f/1255980.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/2f0e3731b28e63e8e9c6d3690dbd412e/1551482.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/b2b3a4ec1e34517ad4ecbe2bb67bbb46/1254479.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/d4b71103353055e690996fe7dcfb1c1a/3198791.jpeg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/6aa326483725315aedaf968c945c2457/2029530.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/a86d28f2916f9a25b3038a10b2467d5e/1828983.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/2d533d2ec5c1adc8bbaa2f9e2600f47e/1421939.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/aea01f4f99f0b8a8682b508e5f65251f/2516411.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/fc60d971a160c5a3e77066fca8d0957b/1617362.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/9cccba8dfc61eaa245fb487fd0d6ab13/4815873.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/de3b28cd85859e5a31a63a4ec5f2674a/2071224.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/d18c81209b7298d70227a99ee15b46de/1669124.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/f997d06b1a185b238e524ace0be255aa/2259766.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/21c368a5c43dd0c5ec40efa48491eda8/1942515.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/30ad80ea25bccd4853e076fabee4c474/2200442.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/7ecbba77d7966684854006081ab534b0/5125939.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/2e527ab66c726c32a199308c8e4e44a2/2486431.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/e9649f360a540cf03639a8763f341870/4531321.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/22efdfbdae0f92aefe4b7df104711619/2726983.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/1d40186dcbf7b68808840b5473f53aa4/3276878.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/6ec887ca0e4b6751fad78c7cfbbcc349/2788012.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/649bcc7a4e0aa3a1c26de6e66482cabf/2234717.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/62b6f1b6a7da22ae1cf321fa1eab08ed/2666135.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/59e7b5a3720c8b9fe8d71312ea3dd8fe/2806812.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/8a7eadb87b2fccbf3bee25b3c24a3faf/2313530.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/5c950ef3c3be40ada92b8acbdf2f9b99/2136221.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/08a4977503a8b76edd167109219850f8/1587566.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/61ce4c41a5d846bcff6a64140b498973/1979885.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/3310c213cc7a9707746f2c72bb05f9b9/1255685.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/dfb32b1721785c58e24ff4ce3d15539d/3718330.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/ab7980aa9c148b3ec40a22ce74e92151/3718810.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/c82b5121db39c81993c5f06d47fa22df/1528411.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/bea9e852bd573cc9f7e0e9add30b8504/1892289.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/6ad3dcd6f37a87ab0954328b277e0999/4184635.png" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/d96d8fb6fc314d1eb3a963919d094926/2143505.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/70456ff5c3a3e75b2ef16d10c9ba9ca1/2196392.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/98256a544d9dd3fd45b7515d6bf1e2ba/1905644.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/4fb0cfcc80481de4d834dbefdd4b14e1/2504244.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/c3c71996a79f889deccac1e319682647/2947535.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/f01fcaa189905aa4131b79fd36fa5a85/2309604.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/69e35f7481b8a77c74c6b72de13ddf13/2700042.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/86dd3e7a87c517db697250d5af8d7da3/3140597.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/cc4bf45e9c55828df3eb06631de86e76/1209989.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/f1d6731e63e4eb96cee5d120569e3a8b/2284214.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/27c4116769f4cef5739cbe9336b1ed58/4868710.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/1b3ffbff2f6fa26328b69f95fc71dccf/2748008.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/e539fb4369f11547a8b02c76e72cb6ac/1208059.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/cd56eacb381f10cbc2c726cca5ad4b83/1208902.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/fd3e30571b0faf11722134656c04bfa3/2219970.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i.imgur.com/cEfooVj.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i.imgur.com/RHWeXWx.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i.imgur.com/HwZd8lm.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i.imgur.com/o5D75vs.jpg" /></div>
+    <div class="draggable rotate"><img src="http://rymimg.com/lk/s/l/e4c903e407d66c9ee252b53e96fb88cb/1988561.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i.imgur.com/hpKuwag.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i6.minus.com/jbjA8IKb8hzqpv_e.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i6.minus.com/j0I3S8kWY34Bv_e.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i6.minus.com/j0IO5OxseRtiL_e.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i5.minus.com/jx2xAOwwqppFJ_e.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i7.minus.com/jUs4VvvLaX3NL_e.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i.imgur.com/bCRcgCl.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i.imgur.com/tCfRVeD.jpg" /></div>
+    <div class="draggable rotate"><img src="http://i.imgur.com/YCZZiF3.jpg" /></div>
+    <div class="draggable rotate"><img src="http://www.rockband.com/assets/thumbs/boldaslove.png" /></div>
+  </span>
 </div>
-
-<% unless session[:message].nil? %>
-  <div id="errors">
-      <em><%= session[:message] %></em>
-  </div>
-<% end %>
-
-
-<h3>Ready to Host a Party?  Enter your information to create an account</h3>
-
-<%= render partial: "hosts/sign_up", locals: {host: @host} %>
-
-
-

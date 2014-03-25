@@ -1,25 +1,29 @@
 <h1>Host Page</h1>
-
-
 <h2>Want to Party Now? </h2>
 
 <%if @current_party.nil?%>
-  <button>Start a Party</button>
+  <button id="create-party">Start a Party</button>
 <%else%>
   <a href="/party-dashboard/<%=@current_party.id%>" >Join <%=@current_party.party_key%> Right now!</a>
 <%end %>
+<div id="form" class="display">
+
+  <%= render partial: "parties/new_party", locals: {party: @party} %>
+
+</div>
 
 <h2>List of Past Parties</h2>
 
 
 <div id="accordion">
   <%@past_parties.each do |party|%>
-  <h3 class="accordian-panel"><%=link_to party.party_key, party_path(party.id)%> </h3>
-    <div>
+  <h3 class="accordian-panel1">
+    <%=link_to party.party_key, party_path(party.id)%> 
+  </h3>
+    <div class="accordian-panel2">
       <p>
-
       <%unless party.songs.nil?%>
-          Set List:<br>
+        Set List:<br>
         <%party.songs.each_index do |i|%>
           <%=party.songs_time[i].strftime("%l:%M %P")+' '+party.songs[i].title+" "+'('+party.songs[i].artist+')'%>
         <%end%>  
