@@ -1,6 +1,6 @@
 // Fun:  Making the spinning divs draggable
   $(function() {
-    $( ".draggable" ).draggable({ axis: "y" });
+    $( ".draggable" ).draggable();
   });
 
 // Expand Panel for Login
