@@ -4,10 +4,15 @@
 <h2>Want to Party Now? </h2>
 
 <%if @current_party.nil?%>
-  <button>Start a Party</button>
+  <button id="create-party">Start a Party</button>
 <%else%>
   <a href="/party-dashboard/<%=@current_party.id%>" >Join <%=@current_party.party_key%> Right now!</a>
 <%end %>
+<div id="form" class="display">
+
+  <%= render partial: "parties/new_party", locals: {party: @party} %>
+
+</div>
 
 <h2>List of Past Parties</h2>
 
