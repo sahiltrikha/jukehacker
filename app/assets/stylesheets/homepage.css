@@ -3918,5 +3918,20 @@ button, input[type=submit] {
   background-color: rgba(0,0,0,0);
   border: none;
   margin: 0px;
-  text-align: center;
+  float: center;
+}
+
+form div {
+  color: rgba(0,0,0,0);
+}
+
+form label {
+  float: left;
+  margin-bottom: 50px;
+  display: block;
+}
+
+form input[type=text] {
+  text-align: right;
+  margin-bottom: 20px;
 }

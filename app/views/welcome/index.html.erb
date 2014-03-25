@@ -9,7 +9,7 @@
     
     <section id="login">
         <h3>Already a Host?  Click Login to Start a Party</h3>
-        <%=form_tag "/sessions" do %>
+        <%= form_tag "/sessions" do %>
         <%= label_tag :email %>
         <%= email_field_tag :email, session[:email] %> </br>
         <%= label_tag :password %>
