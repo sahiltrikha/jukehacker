@@ -66,3 +66,5 @@ gem 'grooveshark'
 
 # required gem for heroku
 gem 'rails_12factor', group: :production
+
+gem 'rails-erd'

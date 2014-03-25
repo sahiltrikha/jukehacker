@@ -1,0 +1,102 @@
+digraph Jukehacker {
+rankdir = "LR";
+ranksep = "0.5";
+nodesep = "0.4";
+pad = "0.4,0.4";
+margin = "0,0";
+concentrate = "true";
+labelloc = "t";
+fontsize = "13";
+fontname = "Arial Bold";
+node[ shape  =  "Mrecord" , fontsize  =  "10" , fontname  =  "Arial" , margin  =  "0.07,0.05" , penwidth  =  "1.0"];
+edge[ fontname  =  "Arial" , fontsize  =  "7" , dir  =  "both" , arrowsize  =  "0.9" , penwidth  =  "1.0" , labelangle  =  "32" , labeldistance  =  "1.8"];
+label = "Jukehacker domain model\n\n";
+m_Guest [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Guest</font></td></tr>
+</table>
+>];
+m_Host [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Host</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="email">email <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="first_name">first_name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="last_name">last_name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="password_digest">password_digest <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="zip">zip <font face="Arial Italic" color="grey60">integer</font></td></tr>
+</table>
+>];
+m_Party [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Party</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="party_expiry">party_expiry <font face="Arial Italic" color="grey60">datetime</font></td></tr>
+  <tr><td align="left" width="130" port="party_key">party_key <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+</table>
+>];
+m_PlayedSong [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">PlayedSong</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="downvotes">downvotes <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="total_votes">total_votes <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="upvotes">upvotes <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="user_id">user_id <font face="Arial Italic" color="grey60">integer ∗</font></td></tr>
+</table>
+>];
+m_QueuedSong [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">QueuedSong</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="downvotes">downvotes <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="total_votes">total_votes <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="upvotes">upvotes <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="user_id">user_id <font face="Arial Italic" color="grey60">integer ∗</font></td></tr>
+</table>
+>];
+m_Rule [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Rule</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="banned_value">banned_value <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="condition">condition <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+</table>
+>];
+m_Song [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Song</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="album_art">album_art <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="artist">artist <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="duration">duration <font face="Arial Italic" color="grey60">integer ∗</font></td></tr>
+  <tr><td align="left" width="130" port="grooveshark_artist">grooveshark_artist <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="grooveshark_id">grooveshark_id <font face="Arial Italic" color="grey60">integer ∗</font></td></tr>
+  <tr><td align="left" width="130" port="title">title <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+>];
+m_User [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">User</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="phone_number">phone_number <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+</table>
+>];
+  m_Party -> m_Guest [arrowhead = "normal", arrowtail = "none", weight = "1"];
+  m_User -> m_Guest [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_User -> m_Host [arrowhead = "none", arrowtail = "none", weight = "2"];
+  m_Host -> m_Party [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Party -> m_Song [style = "dotted", arrowhead = "normal", arrowtail = "none", weight = "1", constraint = "false"];
+  m_Party -> m_Song [style = "dotted", arrowhead = "normal", arrowtail = "none", weight = "1", constraint = "false"];
+  m_Party -> m_QueuedSong [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Party -> m_PlayedSong [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Party -> m_Rule [arrowhead = "normal", arrowtail = "normal", weight = "2"];
+  m_Song -> m_PlayedSong [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_Song -> m_QueuedSong [arrowhead = "normal", arrowtail = "none", weight = "2"];
+}
