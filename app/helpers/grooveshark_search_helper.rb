@@ -58,5 +58,4 @@ module GroovesharkSearchHelper
 
   end
 
-
 end
