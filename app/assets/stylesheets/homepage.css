@@ -77,9 +77,7 @@ div {
   float: left;
 }
 
-/* Colors and push to right */
-/* Multiple $i x 0.1 */
-div:nth-child(1) {
+.rotate {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -98,7 +96,28 @@ div:nth-child(1) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.01s;
 }
-div:nth-child(2) {
+/* Colors and push to right */
+/* Multiple $i x 0.1 */
+.rotate div:nth-child(1) {
+  background: #21a08f;
+  border-radius: 50%;
+  animation-name: animation;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0.01s;
+  -webkit-animation-name: animation;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0.01s;
+  -moz-animation-name: animation;
+  -moz-animation-duration: 6s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 0.01s;
+}
+.rotate div:nth-child(2) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -117,7 +136,7 @@ div:nth-child(2) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.02s;
 }
-div:nth-child(3) {
+.rotate div:nth-child(3) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -136,7 +155,7 @@ div:nth-child(3) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.03s;
 }
-div:nth-child(4) {
+.rotate div:nth-child(4) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -155,7 +174,7 @@ div:nth-child(4) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.04s;
 }
-div:nth-child(5) {
+.rotate div:nth-child(5) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -174,7 +193,7 @@ div:nth-child(5) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.05s;
 }
-div:nth-child(6) {
+.rotate div:nth-child(6) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -193,7 +212,7 @@ div:nth-child(6) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.06s;
 }
-div:nth-child(7) {
+.rotate div:nth-child(7) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -212,7 +231,7 @@ div:nth-child(7) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.07s;
 }
-div:nth-child(8) {
+.rotate div:nth-child(8) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -231,7 +250,7 @@ div:nth-child(8) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.08s;
 }
-div:nth-child(9) {
+.rotate div:nth-child(9) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -250,7 +269,7 @@ div:nth-child(9) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.09s;
 }
-div:nth-child(10) {
+.rotate div:nth-child(10) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -269,7 +288,7 @@ div:nth-child(10) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.1s;
 }
-div:nth-child(11) {
+.rotate div:nth-child(11) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -288,7 +307,7 @@ div:nth-child(11) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.11s;
 }
-div:nth-child(12) {
+.rotate div:nth-child(12) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -307,7 +326,7 @@ div:nth-child(12) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.12s;
 }
-div:nth-child(13) {
+.rotate div:nth-child(13) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -326,7 +345,7 @@ div:nth-child(13) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.13s;
 }
-div:nth-child(14) {
+.rotate div:nth-child(14) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -345,7 +364,7 @@ div:nth-child(14) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.14s;
 }
-div:nth-child(15) {
+.rotate div:nth-child(15) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -364,7 +383,7 @@ div:nth-child(15) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.15s;
 }
-div:nth-child(16) {
+.rotate div:nth-child(16) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -383,7 +402,7 @@ div:nth-child(16) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.16s;
 }
-div:nth-child(17) {
+.rotate div:nth-child(17) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -402,7 +421,7 @@ div:nth-child(17) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.17s;
 }
-div:nth-child(18) {
+.rotate div:nth-child(18) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -421,7 +440,7 @@ div:nth-child(18) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.18s;
 }
-div:nth-child(19) {
+.rotate div:nth-child(19) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -440,7 +459,7 @@ div:nth-child(19) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.19s;
 }
-div:nth-child(20) {
+.rotate div:nth-child(20) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -459,7 +478,7 @@ div:nth-child(20) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.2s;
 }
-div:nth-child(21) {
+.rotate div:nth-child(21) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -478,7 +497,7 @@ div:nth-child(21) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.21s;
 }
-div:nth-child(22) {
+.rotate div:nth-child(22) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -497,7 +516,7 @@ div:nth-child(22) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.22s;
 }
-div:nth-child(23) {
+.rotate div:nth-child(23) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -516,7 +535,7 @@ div:nth-child(23) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.23s;
 }
-div:nth-child(24) {
+.rotate div:nth-child(24) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -535,7 +554,7 @@ div:nth-child(24) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.24s;
 }
-div:nth-child(25) {
+.rotate div:nth-child(25) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -554,7 +573,7 @@ div:nth-child(25) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.25s;
 }
-div:nth-child(26) {
+.rotate div:nth-child(26) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -573,7 +592,7 @@ div:nth-child(26) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.26s;
 }
-div:nth-child(27) {
+.rotate div:nth-child(27) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -592,7 +611,7 @@ div:nth-child(27) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.27s;
 }
-div:nth-child(28) {
+.rotate div:nth-child(28) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -611,7 +630,7 @@ div:nth-child(28) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.28s;
 }
-div:nth-child(29) {
+.rotate div:nth-child(29) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -630,7 +649,7 @@ div:nth-child(29) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.29s;
 }
-div:nth-child(30) {
+.rotate div:nth-child(30) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -649,7 +668,7 @@ div:nth-child(30) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.3s;
 }
-div:nth-child(31) {
+.rotate div:nth-child(31) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -668,7 +687,7 @@ div:nth-child(31) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.31s;
 }
-div:nth-child(32) {
+.rotate div:nth-child(32) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -687,7 +706,7 @@ div:nth-child(32) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.32s;
 }
-div:nth-child(33) {
+.rotate div:nth-child(33) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -706,7 +725,7 @@ div:nth-child(33) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.33s;
 }
-div:nth-child(34) {
+.rotate div:nth-child(34) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -725,7 +744,7 @@ div:nth-child(34) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.34s;
 }
-div:nth-child(35) {
+.rotate div:nth-child(35) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -744,7 +763,7 @@ div:nth-child(35) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.35s;
 }
-div:nth-child(36) {
+.rotate div:nth-child(36) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -763,7 +782,7 @@ div:nth-child(36) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.36s;
 }
-div:nth-child(37) {
+.rotate div:nth-child(37) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -782,7 +801,7 @@ div:nth-child(37) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.37s;
 }
-div:nth-child(38) {
+.rotate div:nth-child(38) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -801,7 +820,7 @@ div:nth-child(38) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.38s;
 }
-div:nth-child(39) {
+.rotate div:nth-child(39) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -820,7 +839,7 @@ div:nth-child(39) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.39s;
 }
-div:nth-child(40) {
+.rotate div:nth-child(40) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -839,7 +858,7 @@ div:nth-child(40) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.4s;
 }
-div:nth-child(41) {
+.rotate div:nth-child(41) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -858,7 +877,7 @@ div:nth-child(41) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.41s;
 }
-div:nth-child(42) {
+.rotate div:nth-child(42) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -877,7 +896,7 @@ div:nth-child(42) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.42s;
 }
-div:nth-child(43) {
+.rotate div:nth-child(43) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -896,7 +915,7 @@ div:nth-child(43) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.43s;
 }
-div:nth-child(44) {
+.rotate div:nth-child(44) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -915,7 +934,7 @@ div:nth-child(44) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.44s;
 }
-div:nth-child(45) {
+.rotate div:nth-child(45) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -934,7 +953,7 @@ div:nth-child(45) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.45s;
 }
-div:nth-child(46) {
+.rotate div:nth-child(46) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -953,7 +972,7 @@ div:nth-child(46) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.46s;
 }
-div:nth-child(47) {
+.rotate div:nth-child(47) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -972,7 +991,7 @@ div:nth-child(47) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.47s;
 }
-div:nth-child(48) {
+.rotate div:nth-child(48) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -991,7 +1010,7 @@ div:nth-child(48) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.48s;
 }
-div:nth-child(49) {
+.rotate div:nth-child(49) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -1010,7 +1029,7 @@ div:nth-child(49) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.49s;
 }
-div:nth-child(50) {
+.rotate div:nth-child(50) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -1029,7 +1048,7 @@ div:nth-child(50) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.5s;
 }
-div:nth-child(51) {
+.rotate div:nth-child(51) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -1048,7 +1067,7 @@ div:nth-child(51) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.51s;
 }
-div:nth-child(52) {
+.rotate div:nth-child(52) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -1067,7 +1086,7 @@ div:nth-child(52) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.52s;
 }
-div:nth-child(53) {
+.rotate div:nth-child(53) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -1086,7 +1105,7 @@ div:nth-child(53) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.53s;
 }
-div:nth-child(54) {
+.rotate div:nth-child(54) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -1105,7 +1124,7 @@ div:nth-child(54) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.54s;
 }
-div:nth-child(55) {
+.rotate div:nth-child(55) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -1124,7 +1143,7 @@ div:nth-child(55) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.55s;
 }
-div:nth-child(56) {
+.rotate div:nth-child(56) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -1143,7 +1162,7 @@ div:nth-child(56) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.56s;
 }
-div:nth-child(57) {
+.rotate div:nth-child(57) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -1162,7 +1181,7 @@ div:nth-child(57) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.57s;
 }
-div:nth-child(58) {
+.rotate div:nth-child(58) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -1181,7 +1200,7 @@ div:nth-child(58) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.58s;
 }
-div:nth-child(59) {
+.rotate div:nth-child(59) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -1200,7 +1219,7 @@ div:nth-child(59) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.59s;
 }
-div:nth-child(60) {
+.rotate div:nth-child(60) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -1219,7 +1238,7 @@ div:nth-child(60) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.6s;
 }
-div:nth-child(61) {
+.rotate div:nth-child(61) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -1238,7 +1257,7 @@ div:nth-child(61) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.61s;
 }
-div:nth-child(62) {
+.rotate div:nth-child(62) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -1257,7 +1276,7 @@ div:nth-child(62) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.62s;
 }
-div:nth-child(63) {
+.rotate div:nth-child(63) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -1276,7 +1295,7 @@ div:nth-child(63) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.63s;
 }
-div:nth-child(64) {
+.rotate div:nth-child(64) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -1295,7 +1314,7 @@ div:nth-child(64) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.64s;
 }
-div:nth-child(65) {
+.rotate div:nth-child(65) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -1314,7 +1333,7 @@ div:nth-child(65) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.65s;
 }
-div:nth-child(66) {
+.rotate div:nth-child(66) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -1333,7 +1352,7 @@ div:nth-child(66) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.66s;
 }
-div:nth-child(67) {
+.rotate div:nth-child(67) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -1352,7 +1371,7 @@ div:nth-child(67) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.67s;
 }
-div:nth-child(68) {
+.rotate div:nth-child(68) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -1371,7 +1390,7 @@ div:nth-child(68) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.68s;
 }
-div:nth-child(69) {
+.rotate div:nth-child(69) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -1390,7 +1409,7 @@ div:nth-child(69) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.69s;
 }
-div:nth-child(70) {
+.rotate div:nth-child(70) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -1409,7 +1428,7 @@ div:nth-child(70) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.7s;
 }
-div:nth-child(71) {
+.rotate div:nth-child(71) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -1428,7 +1447,7 @@ div:nth-child(71) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.71s;
 }
-div:nth-child(72) {
+.rotate div:nth-child(72) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -1447,7 +1466,7 @@ div:nth-child(72) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.72s;
 }
-div:nth-child(73) {
+.rotate div:nth-child(73) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -1466,7 +1485,7 @@ div:nth-child(73) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.73s;
 }
-div:nth-child(74) {
+.rotate div:nth-child(74) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -1485,7 +1504,7 @@ div:nth-child(74) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.74s;
 }
-div:nth-child(75) {
+.rotate div:nth-child(75) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -1504,7 +1523,7 @@ div:nth-child(75) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.75s;
 }
-div:nth-child(76) {
+.rotate div:nth-child(76) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -1523,7 +1542,7 @@ div:nth-child(76) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.76s;
 }
-div:nth-child(77) {
+.rotate div:nth-child(77) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -1542,7 +1561,7 @@ div:nth-child(77) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.77s;
 }
-div:nth-child(78) {
+.rotate div:nth-child(78) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -1561,7 +1580,7 @@ div:nth-child(78) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.78s;
 }
-div:nth-child(79) {
+.rotate div:nth-child(79) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -1580,7 +1599,7 @@ div:nth-child(79) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.79s;
 }
-div:nth-child(80) {
+.rotate div:nth-child(80) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -1599,7 +1618,7 @@ div:nth-child(80) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.8s;
 }
-div:nth-child(81) {
+.rotate div:nth-child(81) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -1618,7 +1637,7 @@ div:nth-child(81) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.81s;
 }
-div:nth-child(82) {
+.rotate div:nth-child(82) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -1637,7 +1656,7 @@ div:nth-child(82) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.82s;
 }
-div:nth-child(83) {
+.rotate div:nth-child(83) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -1656,7 +1675,7 @@ div:nth-child(83) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.83s;
 }
-div:nth-child(84) {
+.rotate div:nth-child(84) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -1675,7 +1694,7 @@ div:nth-child(84) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.84s;
 }
-div:nth-child(85) {
+.rotate div:nth-child(85) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -1694,7 +1713,7 @@ div:nth-child(85) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.85s;
 }
-div:nth-child(86) {
+.rotate div:nth-child(86) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -1713,7 +1732,7 @@ div:nth-child(86) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.86s;
 }
-div:nth-child(87) {
+.rotate div:nth-child(87) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -1732,7 +1751,7 @@ div:nth-child(87) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.87s;
 }
-div:nth-child(88) {
+.rotate div:nth-child(88) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -1751,7 +1770,7 @@ div:nth-child(88) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.88s;
 }
-div:nth-child(89) {
+.rotate div:nth-child(89) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -1770,7 +1789,7 @@ div:nth-child(89) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.89s;
 }
-div:nth-child(90) {
+.rotate div:nth-child(90) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -1789,7 +1808,7 @@ div:nth-child(90) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.9s;
 }
-div:nth-child(91) {
+.rotate div:nth-child(91) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -1808,7 +1827,7 @@ div:nth-child(91) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.91s;
 }
-div:nth-child(92) {
+.rotate div:nth-child(92) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -1827,7 +1846,7 @@ div:nth-child(92) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.92s;
 }
-div:nth-child(93) {
+.rotate div:nth-child(93) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -1846,7 +1865,7 @@ div:nth-child(93) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.93s;
 }
-div:nth-child(94) {
+.rotate div:nth-child(94) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -1865,7 +1884,7 @@ div:nth-child(94) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.94s;
 }
-div:nth-child(95) {
+.rotate div:nth-child(95) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -1884,7 +1903,7 @@ div:nth-child(95) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.95s;
 }
-div:nth-child(96) {
+.rotate div:nth-child(96) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -1903,7 +1922,7 @@ div:nth-child(96) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.96s;
 }
-div:nth-child(97) {
+.rotate div:nth-child(97) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -1922,7 +1941,7 @@ div:nth-child(97) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.97s;
 }
-div:nth-child(98) {
+.rotate div:nth-child(98) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -1941,7 +1960,7 @@ div:nth-child(98) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.98s;
 }
-div:nth-child(99) {
+.rotate div:nth-child(99) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -1960,7 +1979,7 @@ div:nth-child(99) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 0.99s;
 }
-div:nth-child(100) {
+.rotate div:nth-child(100) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -1979,7 +1998,7 @@ div:nth-child(100) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1s;
 }
-div:nth-child(101) {
+.rotate div:nth-child(101) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -1998,7 +2017,7 @@ div:nth-child(101) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.01s;
 }
-div:nth-child(102) {
+.rotate div:nth-child(102) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -2017,7 +2036,7 @@ div:nth-child(102) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.02s;
 }
-div:nth-child(103) {
+.rotate div:nth-child(103) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -2036,7 +2055,7 @@ div:nth-child(103) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.03s;
 }
-div:nth-child(104) {
+.rotate div:nth-child(104) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -2055,7 +2074,7 @@ div:nth-child(104) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.04s;
 }
-div:nth-child(105) {
+.rotate div:nth-child(105) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -2074,7 +2093,7 @@ div:nth-child(105) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.05s;
 }
-div:nth-child(106) {
+.rotate div:nth-child(106) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -2093,7 +2112,7 @@ div:nth-child(106) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.06s;
 }
-div:nth-child(107) {
+.rotate div:nth-child(107) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -2112,7 +2131,7 @@ div:nth-child(107) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.07s;
 }
-div:nth-child(108) {
+.rotate div:nth-child(108) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -2131,7 +2150,7 @@ div:nth-child(108) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.08s;
 }
-div:nth-child(109) {
+.rotate div:nth-child(109) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -2150,7 +2169,7 @@ div:nth-child(109) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.09s;
 }
-div:nth-child(110) {
+.rotate div:nth-child(110) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -2169,7 +2188,7 @@ div:nth-child(110) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.1s;
 }
-div:nth-child(111) {
+.rotate div:nth-child(111) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -2188,7 +2207,7 @@ div:nth-child(111) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.11s;
 }
-div:nth-child(112) {
+.rotate div:nth-child(112) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -2207,7 +2226,7 @@ div:nth-child(112) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.12s;
 }
-div:nth-child(113) {
+.rotate div:nth-child(113) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -2226,7 +2245,7 @@ div:nth-child(113) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.13s;
 }
-div:nth-child(114) {
+.rotate div:nth-child(114) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -2245,7 +2264,7 @@ div:nth-child(114) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.14s;
 }
-div:nth-child(115) {
+.rotate div:nth-child(115) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -2264,7 +2283,7 @@ div:nth-child(115) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.15s;
 }
-div:nth-child(116) {
+.rotate div:nth-child(116) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -2283,7 +2302,7 @@ div:nth-child(116) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.16s;
 }
-div:nth-child(117) {
+.rotate div:nth-child(117) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -2302,7 +2321,7 @@ div:nth-child(117) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.17s;
 }
-div:nth-child(118) {
+.rotate div:nth-child(118) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -2321,7 +2340,7 @@ div:nth-child(118) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.18s;
 }
-div:nth-child(119) {
+.rotate div:nth-child(119) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -2340,7 +2359,7 @@ div:nth-child(119) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.19s;
 }
-div:nth-child(120) {
+.rotate div:nth-child(120) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -2359,7 +2378,7 @@ div:nth-child(120) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.2s;
 }
-div:nth-child(121) {
+.rotate div:nth-child(121) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -2378,7 +2397,7 @@ div:nth-child(121) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.21s;
 }
-div:nth-child(122) {
+.rotate div:nth-child(122) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -2397,7 +2416,7 @@ div:nth-child(122) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.22s;
 }
-div:nth-child(123) {
+.rotate div:nth-child(123) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -2416,7 +2435,7 @@ div:nth-child(123) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.23s;
 }
-div:nth-child(124) {
+.rotate div:nth-child(124) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -2435,7 +2454,7 @@ div:nth-child(124) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.24s;
 }
-div:nth-child(125) {
+.rotate div:nth-child(125) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -2454,7 +2473,7 @@ div:nth-child(125) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.25s;
 }
-div:nth-child(126) {
+.rotate div:nth-child(126) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -2473,7 +2492,7 @@ div:nth-child(126) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.26s;
 }
-div:nth-child(127) {
+.rotate div:nth-child(127) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -2492,7 +2511,7 @@ div:nth-child(127) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.27s;
 }
-div:nth-child(128) {
+.rotate div:nth-child(128) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -2511,7 +2530,7 @@ div:nth-child(128) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.28s;
 }
-div:nth-child(129) {
+.rotate div:nth-child(129) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -2530,7 +2549,7 @@ div:nth-child(129) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.29s;
 }
-div:nth-child(130) {
+.rotate div:nth-child(130) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -2549,7 +2568,7 @@ div:nth-child(130) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.3s;
 }
-div:nth-child(131) {
+.rotate div:nth-child(131) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -2568,7 +2587,7 @@ div:nth-child(131) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.31s;
 }
-div:nth-child(132) {
+.rotate div:nth-child(132) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -2587,7 +2606,7 @@ div:nth-child(132) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.32s;
 }
-div:nth-child(133) {
+.rotate div:nth-child(133) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -2606,7 +2625,7 @@ div:nth-child(133) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.33s;
 }
-div:nth-child(134) {
+.rotate div:nth-child(134) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -2625,7 +2644,7 @@ div:nth-child(134) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.34s;
 }
-div:nth-child(135) {
+.rotate div:nth-child(135) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -2644,7 +2663,7 @@ div:nth-child(135) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.35s;
 }
-div:nth-child(136) {
+.rotate div:nth-child(136) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -2663,7 +2682,7 @@ div:nth-child(136) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.36s;
 }
-div:nth-child(137) {
+.rotate div:nth-child(137) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -2682,7 +2701,7 @@ div:nth-child(137) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.37s;
 }
-div:nth-child(138) {
+.rotate div:nth-child(138) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -2701,7 +2720,7 @@ div:nth-child(138) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.38s;
 }
-div:nth-child(139) {
+.rotate div:nth-child(139) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -2720,7 +2739,7 @@ div:nth-child(139) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.39s;
 }
-div:nth-child(140) {
+.rotate div:nth-child(140) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -2739,7 +2758,7 @@ div:nth-child(140) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.4s;
 }
-div:nth-child(141) {
+.rotate div:nth-child(141) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -2758,7 +2777,7 @@ div:nth-child(141) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.41s;
 }
-div:nth-child(142) {
+.rotate div:nth-child(142) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -2777,7 +2796,7 @@ div:nth-child(142) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.42s;
 }
-div:nth-child(143) {
+.rotate div:nth-child(143) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -2796,7 +2815,7 @@ div:nth-child(143) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.43s;
 }
-div:nth-child(144) {
+.rotate div:nth-child(144) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -2815,7 +2834,7 @@ div:nth-child(144) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.44s;
 }
-div:nth-child(145) {
+.rotate div:nth-child(145) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -2834,7 +2853,7 @@ div:nth-child(145) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.45s;
 }
-div:nth-child(146) {
+.rotate div:nth-child(146) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -2853,7 +2872,7 @@ div:nth-child(146) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.46s;
 }
-div:nth-child(147) {
+.rotate div:nth-child(147) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -2872,7 +2891,7 @@ div:nth-child(147) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.47s;
 }
-div:nth-child(148) {
+.rotate div:nth-child(148) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -2891,7 +2910,7 @@ div:nth-child(148) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.48s;
 }
-div:nth-child(149) {
+.rotate div:nth-child(149) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -2910,7 +2929,7 @@ div:nth-child(149) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.49s;
 }
-div:nth-child(150) {
+.rotate div:nth-child(150) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -2929,7 +2948,7 @@ div:nth-child(150) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.5s;
 }
-div:nth-child(151) {
+.rotate div:nth-child(151) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -2948,7 +2967,7 @@ div:nth-child(151) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.51s;
 }
-div:nth-child(152) {
+.rotate div:nth-child(152) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -2967,7 +2986,7 @@ div:nth-child(152) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.52s;
 }
-div:nth-child(153) {
+.rotate div:nth-child(153) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -2986,7 +3005,7 @@ div:nth-child(153) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.53s;
 }
-div:nth-child(154) {
+.rotate div:nth-child(154) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -3005,7 +3024,7 @@ div:nth-child(154) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.54s;
 }
-div:nth-child(155) {
+.rotate div:nth-child(155) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -3024,7 +3043,7 @@ div:nth-child(155) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.55s;
 }
-div:nth-child(156) {
+.rotate div:nth-child(156) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -3043,7 +3062,7 @@ div:nth-child(156) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.56s;
 }
-div:nth-child(157) {
+.rotate div:nth-child(157) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -3062,7 +3081,7 @@ div:nth-child(157) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.57s;
 }
-div:nth-child(158) {
+.rotate div:nth-child(158) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -3081,7 +3100,7 @@ div:nth-child(158) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.58s;
 }
-div:nth-child(159) {
+.rotate div:nth-child(159) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -3100,7 +3119,7 @@ div:nth-child(159) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.59s;
 }
-div:nth-child(160) {
+.rotate div:nth-child(160) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -3119,7 +3138,7 @@ div:nth-child(160) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.6s;
 }
-div:nth-child(161) {
+.rotate div:nth-child(161) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -3138,7 +3157,7 @@ div:nth-child(161) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.61s;
 }
-div:nth-child(162) {
+.rotate div:nth-child(162) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -3157,7 +3176,7 @@ div:nth-child(162) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.62s;
 }
-div:nth-child(163) {
+.rotate div:nth-child(163) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -3176,7 +3195,7 @@ div:nth-child(163) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.63s;
 }
-div:nth-child(164) {
+.rotate div:nth-child(164) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -3195,7 +3214,7 @@ div:nth-child(164) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.64s;
 }
-div:nth-child(165) {
+.rotate div:nth-child(165) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -3214,7 +3233,7 @@ div:nth-child(165) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.65s;
 }
-div:nth-child(166) {
+.rotate div:nth-child(166) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -3233,7 +3252,7 @@ div:nth-child(166) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.66s;
 }
-div:nth-child(167) {
+.rotate div:nth-child(167) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -3252,7 +3271,7 @@ div:nth-child(167) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.67s;
 }
-div:nth-child(168) {
+.rotate div:nth-child(168) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -3271,7 +3290,7 @@ div:nth-child(168) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.68s;
 }
-div:nth-child(169) {
+.rotate div:nth-child(169) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -3290,7 +3309,7 @@ div:nth-child(169) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.69s;
 }
-div:nth-child(170) {
+.rotate div:nth-child(170) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -3309,7 +3328,7 @@ div:nth-child(170) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.7s;
 }
-div:nth-child(171) {
+.rotate div:nth-child(171) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -3328,7 +3347,7 @@ div:nth-child(171) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.71s;
 }
-div:nth-child(172) {
+.rotate div:nth-child(172) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -3347,7 +3366,7 @@ div:nth-child(172) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.72s;
 }
-div:nth-child(173) {
+.rotate div:nth-child(173) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -3366,7 +3385,7 @@ div:nth-child(173) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.73s;
 }
-div:nth-child(174) {
+.rotate div:nth-child(174) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -3385,7 +3404,7 @@ div:nth-child(174) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.74s;
 }
-div:nth-child(175) {
+.rotate div:nth-child(175) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -3404,7 +3423,7 @@ div:nth-child(175) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.75s;
 }
-div:nth-child(176) {
+.rotate div:nth-child(176) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -3423,7 +3442,7 @@ div:nth-child(176) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.76s;
 }
-div:nth-child(177) {
+.rotate div:nth-child(177) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -3442,7 +3461,7 @@ div:nth-child(177) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.77s;
 }
-div:nth-child(178) {
+.rotate div:nth-child(178) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -3461,7 +3480,7 @@ div:nth-child(178) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.78s;
 }
-div:nth-child(179) {
+.rotate div:nth-child(179) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -3480,7 +3499,7 @@ div:nth-child(179) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.79s;
 }
-div:nth-child(180) {
+.rotate div:nth-child(180) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -3499,7 +3518,7 @@ div:nth-child(180) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.8s;
 }
-div:nth-child(181) {
+.rotate div:nth-child(181) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -3518,7 +3537,7 @@ div:nth-child(181) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.81s;
 }
-div:nth-child(182) {
+.rotate div:nth-child(182) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -3537,7 +3556,7 @@ div:nth-child(182) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.82s;
 }
-div:nth-child(183) {
+.rotate div:nth-child(183) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -3556,7 +3575,7 @@ div:nth-child(183) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.83s;
 }
-div:nth-child(184) {
+.rotate div:nth-child(184) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -3575,7 +3594,7 @@ div:nth-child(184) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.84s;
 }
-div:nth-child(185) {
+.rotate div:nth-child(185) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -3594,7 +3613,7 @@ div:nth-child(185) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.85s;
 }
-div:nth-child(186) {
+.rotate div:nth-child(186) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -3613,7 +3632,7 @@ div:nth-child(186) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.86s;
 }
-div:nth-child(187) {
+.rotate div:nth-child(187) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -3632,7 +3651,7 @@ div:nth-child(187) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.87s;
 }
-div:nth-child(188) {
+.rotate div:nth-child(188) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -3651,7 +3670,7 @@ div:nth-child(188) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.88s;
 }
-div:nth-child(189) {
+.rotate div:nth-child(189) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -3670,7 +3689,7 @@ div:nth-child(189) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.89s;
 }
-div:nth-child(190) {
+.rotate div:nth-child(190) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -3689,7 +3708,7 @@ div:nth-child(190) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.9s;
 }
-div:nth-child(191) {
+.rotate div:nth-child(191) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -3708,7 +3727,7 @@ div:nth-child(191) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.91s;
 }
-div:nth-child(192) {
+.rotate div:nth-child(192) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -3727,7 +3746,7 @@ div:nth-child(192) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.92s;
 }
-div:nth-child(193) {
+.rotate div:nth-child(193) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
@@ -3746,7 +3765,7 @@ div:nth-child(193) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.93s;
 }
-div:nth-child(194) {
+.rotate div:nth-child(194) {
   background: #34495e;
   border-radius: 50%;
   animation-name: animation;
@@ -3765,7 +3784,7 @@ div:nth-child(194) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.94s;
 }
-div:nth-child(195) {
+.rotate div:nth-child(195) {
   background: white;
  
  border-radius: 50%; animation-name: animation;
@@ -3784,7 +3803,7 @@ div:nth-child(195) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.95s;
 }
-div:nth-child(196) {
+.rotate div:nth-child(196) {
   background: #8f44ad;
   border-radius: 50%;
   animation-name: animation;
@@ -3803,7 +3822,7 @@ div:nth-child(196) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.96s;
 }
-div:nth-child(197) {
+.rotate div:nth-child(197) {
   background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
@@ -3822,7 +3841,7 @@ div:nth-child(197) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.97s;
 }
-div:nth-child(198) {
+.rotate div:nth-child(198) {
   background: #e54d42;
   border-radius: 50%;
   animation-name: animation;
@@ -3841,7 +3860,7 @@ div:nth-child(198) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.98s;
 }
-div:nth-child(199) {
+.rotate div:nth-child(199) {
   background: #f1aa2a;
   border-radius: 50%;
   animation-name: animation;
@@ -3860,7 +3879,7 @@ div:nth-child(199) {
   -moz-animation-timing-function: linear;
   -moz-animation-delay: 1.99s;
 }
-div:nth-child(200) {
+.rotate div:nth-child(200) {
   background: #2d7eb6;
   border-radius: 50%;
   animation-name: animation;
