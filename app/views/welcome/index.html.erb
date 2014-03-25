@@ -9,8 +9,9 @@
                 <button class="subtitle1-button">Sign Up</button>
             </span>
         <%else %>
-            <a href="/hosts/<%=session[:host_id]%>"><%=session[:first_name]%></a>
-            <%=link_to("Logout", session_path(session[:host_id]), method: "delete") %>
+            <%=link_to("#{session[:first_name]}'s Party Dashboard", host_path(session[:host_id]), :class => "subtitle-link" )  %>
+            <span class="subtitle">|</span>
+            <%=link_to("Logout", session_path(session[:host_id]), :class => "subtitle-link",method: "delete") %>
         <%end%>
 
         
