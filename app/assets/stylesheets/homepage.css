@@ -23,7 +23,17 @@ h1 {
   margin: 0 0 10px 0;
 }
 
-img {
+
+h3.accordian-panel {
+
+}
+
+div.accordian-panel2 {
+
+}
+
+img.rotating {
+
   width: 4em;
   height: 4em;
   border-radius: 50%;
