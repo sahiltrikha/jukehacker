@@ -8,6 +8,7 @@ form label {
   display: inline-block;
   float: left;
   clear: right;
+  margin: 0 10px;
 }
 
 form input {
@@ -17,6 +18,7 @@ form input {
   background-color: rgba(0,0,0,0);
   border: 1px solid black;
   border-radius: 5px;
+  margin: 0 10px;
 }
 
 form input[type=submit]{
@@ -26,8 +28,9 @@ form input[type=submit]{
   
 }
 
-form input[type=button] {
-  padding: 10px;
+form button {
+  padding: 0px;
+  margin: 5px;
 }
 
 #form h2 {
@@ -37,4 +40,8 @@ form input[type=button] {
 
 #form {
   width: 50%;
+}
+
+#party-party-key {
+
 }
