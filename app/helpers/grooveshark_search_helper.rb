@@ -37,12 +37,13 @@ module GroovesharkSearchHelper
   
   def addSong(song)
     if song.data["estimate_duration"].to_i == 0
-      Song.create({title: song.data["song_name"], artist: song.data["artist_name"], duration: itunesDuration(song.data["song_name"], song.data["artist_name"]) + 3000, grooveshark_artist: song.data["artist_id"].to_i, grooveshark_id: song.data["song_id"].to_i, album_art: itunesArt(song.data["song_name"], song.data["artist_name"])})
+      Song.create({title: song.data["song_name"], artist: song.data["artist_name"], duration: itunesDuration(song.data["song_name"], song.data["artist_name"]) + 3000, grooveshark_artist: song.data["artist_id"].to_i, grooveshark_id: song.data["song_id"].to_i})
     else
-      Song.create({title: song.data["song_name"], artist: song.data["artist_name"], duration: song.data["estimate_duration"].to_i * 1000 + 1500, grooveshark_artist: song.data["artist_id"].to_i, grooveshark_id: song.data["song_id"].to_i, album_art: itunesArt(song.data["song_name"], song.data["artist_name"])})
+      Song.create({title: song.data["song_name"], artist: song.data["artist_name"], duration: song.data["estimate_duration"].to_i * 1000 + 1500, grooveshark_artist: song.data["artist_id"].to_i, grooveshark_id: song.data["song_id"].to_i})
     end
   end 
 
+  # album_art: itunesArt(song.data["song_name"], song.data["artist_name"])
 
   def itunesDuration(artist, song)
 
@@ -58,16 +59,16 @@ module GroovesharkSearchHelper
 
   end
 
-  def itunesArt(artist, song)
-    artist_name = artist.gsub(" ","+")
-    song_name = song.gsub(" ","+")
+  # def itunesArt(artist, song)
+  #   artist_name = artist.gsub(" ","+")
+  #   song_name = song.gsub(" ","+")
 
 
-    from_itunes = HTTParty.get("http://itunes.apple.com/search?term=#{song_name}&artistName=#{artist_name}&limit=10")
+  #   from_itunes = HTTParty.get("http://itunes.apple.com/search?term=#{song_name}&artistName=#{artist_name}&limit=10")
 
-    from_itunes_as_hash = JSON(from_itunes)
+  #   from_itunes_as_hash = JSON(from_itunes)
 
-    return from_itunes_as_hash["results"][0]["artworkUrl100"].gsub('100x100-75.jpg', '')
-  end
+  #   return from_itunes_as_hash["results"][0]["artworkUrl100"].gsub('100x100-75.jpg', '')
+  # end
 
 end
