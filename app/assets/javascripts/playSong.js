@@ -1,6 +1,6 @@
 var playSong = function(){
   // removes the previous iteration of the player
-  $("#play").children().remove()
+  $("#player").children().remove()
 
   // gets the information about the next song
   $.getJSON('/getnextsong', function(song){
@@ -20,7 +20,8 @@ var playSong = function(){
       // appends a new player with the correct song
       $("#player").append("<object type='application/x-shockwave-flash' data='http://grooveshark.com/songWidget.swf' width='0' height='1'><param name='wmode' value='window' /><param name='allowScriptAccess' value='always' /><param name='flashvars' value='hostname=cowbell.grooveshark.com&songIDs=" + song.grooveshark_id + "&style=metal&p=1' /></object>");
       $("#play").children(":first-child").remove();
-      $("#play").prepend("<img src='"+song.album_art+"450x450-75.jpg' width='300' >")
+      $("#play").prepend("<img src='"+song.album_art+"450x450-75.jpg' width='300' >");
+      $("#play-text").text("Title: "+ song.title +" | Artist: " + song.artist + "");
       // posts the song object to the played songs table
       $.post('/startsong', {song_id: song.id, party_id: window.location.href.split("/")[4]});
 
