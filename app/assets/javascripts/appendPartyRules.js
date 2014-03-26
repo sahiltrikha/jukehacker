@@ -1,9 +1,9 @@
 var appendBannedTracks = function(){
-  $("#add-banned-tracks").before("<br><input type='text' name=[tracks][]>");
+  $("#add-banned-tracks").before("<br><br><input type='text' name=[tracks][]>");
 };
 
 var appendBannedArtists = function(){
-  $("#add-banned-artists").before("<br><input type='text' name=[artists][]>");
+  $("#add-banned-artists").before("<br><br><input type='text' name=[artists][]>");
 };
 
 if(document.querySelector("#new_party")){
