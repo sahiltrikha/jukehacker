@@ -87,13 +87,13 @@ ol{
   padding-left: 10px;
   width: 70px;
   height: 70px;
-
+  float: left;
 }
 
 .queue-text {
   font-family: 'Roboto', sans-serif;
   padding-right: 35px;
-  float: right;
+  /*float: right;*/
   color: #f4ecde;
 /*  font-size: 6;
 */

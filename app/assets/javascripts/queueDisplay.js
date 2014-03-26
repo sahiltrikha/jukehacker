@@ -3,9 +3,17 @@ var getQueue = function(){
   $.getJSON('/getqueue', function(response){
     // this iterates over the pending playlist and adds them to the playlist
     response.forEach(function(song, index){
-      console.log(index);
-      $("#queue-" + index.toString()).children().remove()
-      $("#queue-" + index.toString()).html("<img class='queue-art' src='http://a1.mzstatic.com/us/r30/Music/17/07/36/mzi.ldnorbao.100x100-75.jpg' /><span class='queue-text'><p>Title: " + song.title + "</p><p>Artist: " + song.artist + "</p></span>");
+      // console.log(index);
+      // clear out queue div
+      $("#queue-" + index.toString()).children().remove();
+
+      // build new queue div
+      var songTitle  = song.title.length <= 17  ? song.title  : song.title.substring(0, 15)  + "&hellip;";
+      var artistName = song.artist.length <= 17 ? song.artist : song.artist.substring(0, 15) + "&hellip;";
+      var songArt = song.album_art
+      var queueDivHTML = "<img class='queue-art' src=" + songArt + "100x100-75.jpg />"
+      queueDivHTML +=    "<span class='queue-text'><p>&nbsp Title: " + songTitle + "</p><p>&nbsp Artist: " + artistName + "</p></span>"
+      $("#queue-" + index.toString()).html(queueDivHTML);
     });
   });
 };
@@ -13,7 +21,7 @@ var getQueue = function(){
 if(document.querySelector("#song-playlist")){
   $("#song-playlist").load(getQueue());
   $("#song-playlist").ready(function(){
-    setInterval('getQueue()', 100000);
+    setInterval('getQueue()', 1000);
   });
 };
   // <li>
