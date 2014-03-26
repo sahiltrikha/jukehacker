@@ -2,11 +2,11 @@ var getQueue = function(){
   // getqueue retrieves a list of all songs in the queue for this party
   $.getJSON('/getqueue', function(response){
     // this iterates over the pending playlist and adds them to the playlist
+    $(".queue").children().remove();
     response.forEach(function(song, index){
       // console.log(index);
       // clear out queue div
-      $("#queue-" + index.toString()).children().remove();
-
+      
       // build new queue div
       var songTitle  = song.title.length <= 17  ? song.title  : song.title.substring(0, 15)  + "&hellip;";
       var artistName = song.artist.length <= 17 ? song.artist : song.artist.substring(0, 15) + "&hellip;";
