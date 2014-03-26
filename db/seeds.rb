@@ -174,4 +174,3 @@ rule2 = Rule.create(
 
 party1.rules << rule1
 party1.rules << rule2
->>>>>>> 890d347ea9f67203f775897ac1b79965fb3cf2f4
