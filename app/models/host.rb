@@ -6,4 +6,5 @@ class Host < ActiveRecord::Base
   # validations
   validates :email, uniqueness: true, presence: true
   validates :user_id, uniqueness: true, presence: true
+
 end

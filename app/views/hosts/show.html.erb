@@ -25,7 +25,7 @@
       <%unless party.songs.nil?%>
         Set List:<br>
         <%party.songs.each_index do |i|%>
-          <%=party.songs_time[i].strftime("%l:%M %P")+' '+party.songs[i].title+" "+'('+party.songs[i].artist+')'%>
+          <%=party.songs_time[i].strftime("%l:%M %P")+' '+party.songs[i].title+" "+'('+party.songs[i].artist+')'%> <br />
         <%end%>  
       <%end%>
       </p>
@@ -33,3 +33,13 @@
   <%end%>
 
 </div>
+
+
+<div class="recent-played">
+  <%@song_art.each do |album|%>
+    <img class="album" src="<%=album%>100x100-75.jpg">
+    </img>
+  <%end%> 
+</div>
+
+

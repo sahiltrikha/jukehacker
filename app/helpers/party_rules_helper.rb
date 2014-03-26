@@ -17,7 +17,6 @@ module PartyRulesHelper
       values.include?(song.instance_eval(condition.to_s)) 
     end 
 
-
     @song_rejected = @song_rejected.include?(true)
 
   end 
