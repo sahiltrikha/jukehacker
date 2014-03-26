@@ -29,14 +29,14 @@ ol{
 }
 
 #column-left{
-  -webkit-column-count:2;  Chrome, Safari, Opera 
-  -moz-column-count:2;  Firefox 
+  -webkit-column-count:2;  /*Chrome, Safari, Opera */
+  -moz-column-count:2;  /*Firefox */
   column-count:2;
 }
 
 #splitting-page{
-  -webkit-column-count:2;  Chrome, Safari, Opera 
-  -moz-column-count:2;  Firefox 
+  -webkit-column-count:2;  /*Chrome, Safari, Opera */
+  -moz-column-count:2;  /*Firefox */
   column-count:2;
 }
 
