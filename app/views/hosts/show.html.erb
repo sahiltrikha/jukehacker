@@ -1,6 +1,29 @@
 <h1>Host Page</h1>
 <h2>Want to Party Now? </h2>
 
+
+<div id="played-panel">
+
+  <div id="played-container" class="rotate">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+        <% i=1 %>
+        <%@song_art.each do |album|%>
+          <div id= "num<%=i%>" class="rotate">
+            <img class="album" src="<%=album%>100x100-75.jpg"/>
+          </div>
+          <% i=i+1 %>
+        <%end%> 
+  </div>
+
+
+</div>
+
 <%if @current_party.nil?%>
   <button id="create-party">Start a Party</button>
 <%else%>
@@ -37,5 +60,4 @@
 
 <div class="recent-played">
 </div>
-
 

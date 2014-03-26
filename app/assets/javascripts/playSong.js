@@ -32,7 +32,7 @@ var playSong = function(){
       $.ajax({
         url: '/playingsong',
         type: 'DELETE',
-        data: {song_id: song.id, party_id: window.location.href.split("/")[4]},
+        data: {song_id: song.id, party_id: window.location.href.split("/")[2]},
       }); // delete
 
       // starts the process over again by calling the method after the song is over

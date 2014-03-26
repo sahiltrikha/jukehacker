@@ -78,23 +78,22 @@ body {
   margin-left: -2em;
   margin-top: -2em;
   float: left;
-  background: #21a08f;
   border-radius: 50%;
   animation-name: animation;
   animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-delay: 0.01s;
+  animation-delay: 0s;
   -webkit-animation-name: animation;
   -webkit-animation-duration: 6s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -webkit-animation-delay: 0.01s;
+  -webkit-animation-delay: 0s;
   -moz-animation-name: animation;
   -moz-animation-duration: 6s;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;
-  -moz-animation-delay: 0.01s;
+  -moz-animation-delay: 0s;
 }
 /* Colors and push to right */
 /* Multiple $i x 0.1 */
@@ -153,4 +152,15 @@ button, input[type=submit] {
 section h3 {
   font-family: "Open Sans";
   font-size: 16px;
+}
+
+
+.accordian-panel1 {
+  width: 700px;
+
+}
+
+.accordian-panel2 {
+  width: 650px;
+
 }
