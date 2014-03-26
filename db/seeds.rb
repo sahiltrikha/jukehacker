@@ -77,35 +77,40 @@ song1 = Song.create(
   grooveshark_id: 408271,
   title: "Oxford Comma",
   artist: "Vampire Weekend",
-  duration: 196000
+  duration: 196000, 
+  album_art: "http://a2.mzstatic.com/us/r30/Music2/v4/1e/44/17/1e441710-625e-4cf4-f6f4-8d721b737f7d/Vamprie_Weekend_-_Modern_Vampires."
   )
 
 song2 = Song.create(
   grooveshark_id: 936496,
   title: "Me and Julio down by the School",
   artist: "Paul Simon",
-  duration: 163000
+  duration: 163000, 
+  album_art: "http://a4.mzstatic.com/us/r30/Features4/v4/41/00/be/4100be09-0f75-a5de-3dc5-03f2d386d954/dj.brkzaqgz."
   )
 
 song3 = Song.create(
   grooveshark_id: 25133412,
   title: "Enter Sandman",
   artist: "Metallica",
-  duration: 332000
+  duration: 332000, 
+  album_art: "http://a3.mzstatic.com/us/r30/Music/v4/9a/41/03/9a410309-7dbe-fce4-a6be-43101f0a1352/0093624986553."
   )
 
 song4 = Song.create(
   grooveshark_id: 229996995,
   title: "Award Tour",
   artist: "Tribe Called Quest",
-  duration: 222093
+  duration: 222093, 
+  album_art: "http://a3.mzstatic.com/us/r30/Features/ef/12/97/dj.gqlipupq."
   )
 
 song5 = Song.create(
   grooveshark_id: 25887138,
   title: "The Trapeze Swinger",
   artist: "Iron and Wine",
-  duration: 204693
+  duration: 204693, 
+  album_art: "http://a3.mzstatic.com/us/r30/Music/v4/a5/b6/98/a5b69860-2851-8ebb-7329-0a6b9576edea/UMG_cvrart_00602537276257_01_RGB72_1800x1800_12UMGIM65317."
   )
 
 
@@ -156,15 +161,15 @@ played_song5 = PlayedSong.create(
   total_votes: 0
 )
 
-##FIX:  Update how Rules Engine Works
-# rule1 = Rule.create(
-#   condition: "artist", 
-#   banned_value: "Justin Beiber"
-#   )
+rule1 = Rule.create(
+  condition: "artist", 
+  banned_value: "Justin Beiber"
+  )
 
-# rule2 = Rule.create( 
-#   condition: "title", 
-#   banned_value: "Bye Bye Bye"
-#   )
+rule2 = Rule.create( 
+  condition: "title", 
+  banned_value: "Bye Bye Bye"
+  )
 
-
+party1.rules << rule1
+party1.rules << rule2
