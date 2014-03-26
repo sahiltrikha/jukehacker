@@ -7,16 +7,21 @@ class HostsController < ApplicationController
     @party = Party.new    
     @song_art = []
 
+    
     @past_parties.each do |party|    
+      #Step 1:  Add to the Song Art Array 
         party.played_songs.each do |played_song|
           @song_art << played_song.song.album_art
         end 
 
       songs_played = PlayedSong.where("party_id = ? ", party.id).pluck(:song_id)
       songs_played_time = PlayedSong.where("party_id = ? ", party.id).pluck(:created_at)
-
+      
+      #Step 2: Update the Party Object
       party.class.module_eval {attr_accessor :songs}
       party.class.module_eval {attr_accessor :songs_time}
+      
+      #Step 3:  Add the Play Time and Song Details to the Party Object
       if songs_played.blank?
       else 
         party.songs_time = []
@@ -27,10 +32,9 @@ class HostsController < ApplicationController
         party.songs << song_details
         party.songs.flatten!
       end 
-    end 
-
-      binding.pry
-
+    end   
+    
+    @song_art= @song_art[-5..-1]
   end 
 
   def create

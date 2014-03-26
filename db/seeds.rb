@@ -144,6 +144,33 @@ queue_song3 = QueuedSong.create(
   )
 
 
+played_song1 = PlayedSong.create(
+  party_id: party3.id, 
+  song_id: song1.id, 
+  user_id: user1.id, 
+  upvotes: 0, 
+  downvotes: 0,
+  total_votes: 0
+  )
+
+played_song2 = PlayedSong.create(
+  party_id: party3.id, 
+  song_id: song2.id, 
+  user_id: user1.id, 
+  upvotes: 0, 
+  downvotes: 0,
+  total_votes: 0
+  )
+
+played_song3 = PlayedSong.create(
+  party_id: party3.id, 
+  song_id: song3.id, 
+  user_id: user1.id, 
+  upvotes: 0, 
+  downvotes: 0,
+  total_votes: 0
+  )
+
 played_song4 = PlayedSong.create(
   party_id: party3.id, 
   song_id: song4.id, 

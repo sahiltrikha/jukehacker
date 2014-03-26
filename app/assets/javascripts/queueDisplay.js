@@ -18,9 +18,9 @@ var getQueue = function(){
   });
 };
 // this ensures that it is called very second and is called on the party show page
-if(document.querySelector("#song-playlist")){
-  $("#song-playlist").load(getQueue());
-  $("#song-playlist").ready(function(){
+if(document.querySelector("#column-left")){
+  $("#column-left").load(getQueue());
+  $("#column-left").ready(function(){
     setInterval('getQueue()', 1000);
   });
 };
