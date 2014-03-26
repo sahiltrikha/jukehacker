@@ -36,7 +36,12 @@ class QueuedSongsController < ApplicationController
     render json: Song.all
   end
 
-
+  def get_information
+    playlist = QueuedSong.where(party_id: request.referer.split("/").last.to_i)
+    ordered_playlist = playlist.order(total_votes: :desc)
+    @song = ordered_playlist.first
+    render json: @song
+  end
 
   private
 

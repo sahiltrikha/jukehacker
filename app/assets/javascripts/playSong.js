@@ -23,7 +23,10 @@ var playSong = function(){
       $("#play").prepend("<img src='"+song.album_art+"450x450-75.jpg' width='300' >");
       $("#play-text").text("Title: "+ song.title +" | Artist: " + song.artist + "");
       // posts the song object to the played songs table
-      $.post('/startsong', {song_id: song.id, party_id: window.location.href.split("/")[4]});
+      $.getJSON('/queueobject', function(queueObject){
+        $.post('/startsong', {song_id: song.id, party_id: window.location.href.split("/")[4], upvotes: queueObject.upvotes, downvotes: queueObject.downvotes, total_votes: queueObject.total_votes, user_id: queueObject.user_id});  
+      });
+      
 
       // deletes the song object from the queue
       $.ajax({
