@@ -6,7 +6,6 @@ class HostsController < ApplicationController
     @past_parties = Party.where("host_id = ? AND party_expiry < ?" , params[:id], Time.now())
     @party = Party.new    
     @song_art = []
-
     
     @past_parties.each do |party|    
       #Step 1:  Add to the Song Art Array 
@@ -34,7 +33,10 @@ class HostsController < ApplicationController
       end 
     end   
     
-    @song_art= @song_art[-5..-1]
+    unless @song_art.length<=5
+      @song_art= @song_art[-5..-1]
+    end
+
   end 
 
   def create

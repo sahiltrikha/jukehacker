@@ -1,8 +1,46 @@
-img.album{
-  border-radius: 50%; 
+#played-panel {
+  padding-left: 1050px;
 }
 
-div.recent-played {
+#played-container {
+  position: absolute;
+}
 
+#record {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+}
 
+img.album{
+  border-radius: 50%; 
+  width: 4em;
+  height: 4em;
+}
+
+#num1 {
+  position: absolute;
+}
+
+#num2 {
+  position: absolute;
+  margin-left: 80px;
+  margin-top: -80px;
+}
+
+#num3 {
+  position: absolute;
+  margin-top: -220px;  
+}
+
+#num4 {
+  position: absolute;
+  margin-top: -120px;
+  margin-left: -100px;
+}
+
+#num5 {
+  position: absolute;
+  margin-top: -190px;
+  margin-left: 70px;
 }
