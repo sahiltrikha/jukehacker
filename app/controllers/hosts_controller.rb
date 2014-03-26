@@ -34,7 +34,9 @@ class HostsController < ApplicationController
       end 
     end   
     
-    @song_art= @song_art[-5..-1]
+    unless @song_art.length<=5
+      @song_art= @song_art[-5..-1]
+    end
   end 
 
   def create
