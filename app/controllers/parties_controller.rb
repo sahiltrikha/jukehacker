@@ -7,7 +7,7 @@ class PartiesController < ApplicationController
 
   def create
     @party = Party.new(party_params)
-
+    @party.host_id = session[:host_id]
     if @party.save
       # hard sets the expiration for the party at six hours in the future
       @party.party_expiry = @party.created_at + 6.hours

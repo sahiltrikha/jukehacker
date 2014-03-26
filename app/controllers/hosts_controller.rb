@@ -4,9 +4,14 @@ class HostsController < ApplicationController
     authorize()
     @current_party = Party.find_by("host_id = ? AND party_expiry > ?" , params[:id], Time.now())
     @past_parties = Party.where("host_id = ? AND party_expiry < ?" , params[:id], Time.now())
-    
-    
-    @past_parties.each do |party|
+    @party = Party.new    
+    @song_art = []
+
+    @past_parties.each do |party|    
+        party.played_songs.each do |played_song|
+          @song_art << played_song.song.album_art
+        end 
+
       songs_played = PlayedSong.where("party_id = ? ", party.id).pluck(:song_id)
       songs_played_time = PlayedSong.where("party_id = ? ", party.id).pluck(:created_at)
 
@@ -24,9 +29,8 @@ class HostsController < ApplicationController
       end 
     end 
 
+      binding.pry
 
-
-    @party = Party.new
   end 
 
   def create
