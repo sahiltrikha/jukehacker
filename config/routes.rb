@@ -51,19 +51,16 @@ Jukehacker::Application.routes.draw do
   #   # there should be a single song class, with a played boolean, or a place-in-the-queue value
   #   # users can then either create the song (enqueue), upvote or downvote, read, etc.
   #   resources :songs, except: [:new] do 
-  #     member do # each song then has...
+  #     member do        # one route for each song...
   #       put "upvote"   # these could be done with a song#update, but this is more semantic
   #       put "downvote" # it's up to you... i'd just have these redirect to #update
   #     end
 
-  #     collection do  # one for all the songs...
-  #       get "queued"  # #index where not played
+  #     collection do  # one route for 'all' the songs... (more semantic endpoints)
+  #       get "queued" # #index where not played
   #       get "played" # #index where played
+  #       get "next"   # #show where next
   #     end
-  #   end
-
-  #   member do
-  #     get "next" # another semantic endpoint -- can show the song next in queue
   #   end
 
   #   resources :rules # not sure how this works
